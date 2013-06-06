@@ -1,0 +1,10 @@
+<stack>
+  <description brief="reemc_robot">Scripts and configuration files to launch when bringing up REEM-C. </description>
+  <author>Maintained by Adolfo Rodriguez Tsouroukdissian</author>
+  <license>Modified BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reemc_robot</url>
+  <depend stack="reemc_common" />
+  <depend stack="robot_model" />
+  <depend stack="ros" />
+</stack>

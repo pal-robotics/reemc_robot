@@ -1,0 +1,17 @@
+<package>
+  <description brief="reemc_bringup">
+
+     Launch files and scripts needed to bring up the ROS nodes of a REEM-C robot.
+
+  </description>
+  <author>Adolfo Rodriguez Tsouroukdissian</author>
+  <license>Modified BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reemc_bringup</url>
+
+  <depend package="reemc_description"/>
+  <depend package="robot_state_publisher"/>
+
+</package>
+
+

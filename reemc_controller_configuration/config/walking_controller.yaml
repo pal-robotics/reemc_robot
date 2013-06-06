@@ -1,0 +1,9 @@
+walking_controller:
+  type: "reemc_controllers/ReemcWalkingController"
+  joints:
+    - leg_left_3_joint
+    - leg_left_4_joint
+    - leg_left_5_joint
+    - leg_right_3_joint
+    - leg_right_4_joint
+    - leg_right_5_joint
