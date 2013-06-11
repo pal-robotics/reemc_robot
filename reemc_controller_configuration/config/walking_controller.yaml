@@ -1,5 +1,5 @@
 walking_controller:
-  type: "reemc_controllers/ReemcWalkingController"
+  type: reemc_controllers/ReemcWalkingController
   joints:
     - leg_left_3_joint
     - leg_left_4_joint
@@ -7,3 +7,6 @@ walking_controller:
     - leg_right_3_joint
     - leg_right_4_joint
     - leg_right_5_joint
+  left_ft_sensor: left_ft
+  right_ft_sensor: right_ft
+  base_imu_sensor: base_imu

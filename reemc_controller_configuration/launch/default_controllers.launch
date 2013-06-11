@@ -1,6 +1,12 @@
 <launch>
   <!-- Joint state controller -->
-  <rosparam command="load" file="$(find reemc_controller_configuration)/config/joint_state_controller.yaml" />
+  <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
+
+  <!-- Force-torque sensors controller -->
+  <rosparam command="load" file="$(find force_torque_sensor_controller)/force_torque_sensor_controller.yaml" />
+
+  <!-- IMU sensors controller -->
+  <rosparam command="load" file="$(find imu_sensor_controller)/imu_sensor_controller.yaml" />
 
   <!-- Walking controller -->
   <rosparam command="load" file="$(find reemc_controller_configuration)/config/walking_controller.yaml" />
@@ -8,5 +14,8 @@
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
-        args="joint_state_controller walking_controller" />
+        args="joint_state_controller
+              force_torque_sensor_controller
+              imu_sensor_controller
+              walking_controller" />
 </launch>
