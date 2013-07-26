@@ -10,6 +10,10 @@
   <url>http://ros.org/wiki/reem_controller_configuration</url>
 
   <depend package="reemc_walking_controller"/>
+  <depend package="joint_state_controller"/>
+  <depend package="force_torque_sensor_controller"/>
+  <depend package="imu_sensor_controller"/>
+
 </package>
 
 
