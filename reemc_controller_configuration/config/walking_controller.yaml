@@ -1,5 +1,5 @@
 walking_controller:
-  type: walking/WalkingController
+  type: walking/ReemcControl
   joints:
     - leg_left_1_joint
     - leg_left_2_joint
