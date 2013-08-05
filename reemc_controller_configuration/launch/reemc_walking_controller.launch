@@ -1,21 +1,6 @@
 <launch>
   <!-- Walking controller -->
-  <rosparam param="/walking_controller/z_lipm">0.7</rosparam>
-  <rosparam param="/walking_controller/loop_counter_factor">-1.0</rosparam>
-  
-  <rosparam param="/walking_controller/wait_x_p">0.8</rosparam>
-  <rosparam param="/walking_controller/wait_y_p">0.6</rosparam>
-
-  <rosparam param="/walking_controller/step_ds_x_p">1.0</rosparam>
-  <rosparam param="/walking_controller/step_ds_y_p">1.0</rosparam>
-
-
-  <rosparam param="/walking_controller/step_ss_x_p">1.0</rosparam>
-  <rosparam param="/walking_controller/step_ss_p">1.0</rosparam>
-
-  
-  <rosparam param="/walking_controller/z_lipm">0.7</rosparam>
-  <rosparam param="/walking_controller/ft_sensor_z">0.11</rosparam>
+  <rosparam file="$(find reemc_controller_configuration)/config/walking_params.yaml" command="load" ns="walking_controller" />
 
   <include file="$(find reemc_controller_configuration)/launch/walking_controller.launch" /> 
 
