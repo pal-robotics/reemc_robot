@@ -11,7 +11,7 @@
 
   <depend package="reemc_description"/>
   <depend package="robot_state_publisher"/>
-
+  <depend package="reem_head_action"/>
 </package>
 
 
