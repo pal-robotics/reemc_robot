@@ -8,7 +8,7 @@ step_ds_x_p: 1.0
 step_ds_y_p: 1.0
 
 step_ss_x_p: 1.0
-step_ss_p: 1.0
+step_ss_y_p: 1.0
 
 z_lipm: 0.7
 ft_sensor_z: 0.04
