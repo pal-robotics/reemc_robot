@@ -7,7 +7,9 @@
               torso_controller
               head_controller
               left_arm_controller
-              right_arm_controller" />
+              right_arm_controller
+              left_hand_controller
+              right_hand_controller" />
 
   <!-- Point head action -->
   <group ns="head_controller">
