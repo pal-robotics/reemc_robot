@@ -1,6 +1,8 @@
-delta_T: 0.005
 loop_counter_factor: -1.0
-ft_sensor_z: 0.04
+
+biped_controller:
+   delta_T: 0.005
+   ft_sensor_z: 0.04
 
 com_stabilizer:
    ds_x_p: 0.8
