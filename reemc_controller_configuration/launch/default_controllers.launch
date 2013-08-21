@@ -17,4 +17,15 @@
         args="joint_state_controller
               force_torque_sensor_controller
               imu_sensor_controller" />
+  <node name="joint_trajectory_controllers"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--stopped
+              left_leg_controller
+              right_leg_controller
+              torso_controller
+              head_controller
+              left_arm_controller
+              right_arm_controller
+              left_hand_controller
+              right_hand_controller" />
 </launch>
