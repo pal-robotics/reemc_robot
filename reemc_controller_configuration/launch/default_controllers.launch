@@ -9,7 +9,7 @@
   <rosparam command="load" file="$(find imu_sensor_controller)/imu_sensor_controller.yaml" />
 
   <!-- Joint trajectory controllers -->
-  <rosparam command="load" file="$(find reemc_controller_configuration)/config/joint_trajectory_controllers.yaml" />
+<!--   <rosparam command="load" file="$(find reemc_controller_configuration)/config/joint_trajectory_controllers.yaml" /> -->
 
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
