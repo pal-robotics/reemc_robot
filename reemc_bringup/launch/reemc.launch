@@ -13,4 +13,11 @@
     <param name="publish_frequency" type="double" value="50.0" />
     <param name="tf_prefix" type="string" value="" />
   </node>
+
+  <!-- Joystick controller -->
+  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch" />
+
+  <!-- Pre-recorded motions executor -->
+  <include file="$(find reemc_bringup)/launch/play_motion.launch" />
+
 </launch>
