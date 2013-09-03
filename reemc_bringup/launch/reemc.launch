@@ -20,4 +20,7 @@
   <!-- Pre-recorded motions executor -->
   <include file="$(find reemc_bringup)/launch/play_motion.launch" />
 
+  <!-- Sitting application requirements -->
+  <include file="$(find reemc_bringup)/launch/chair_sit.launch" />
+
 </launch>

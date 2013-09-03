@@ -1,0 +1,17 @@
+teleop:
+  sit:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: chair_sit
+      duration:
+        secs: 3
+    buttons: [9, 1]
+  stand:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: stand_up
+      duration:
+        secs: 3
+    buttons: [9, 3]
