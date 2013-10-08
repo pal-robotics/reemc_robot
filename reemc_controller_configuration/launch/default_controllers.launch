@@ -19,8 +19,7 @@
               imu_sensor_controller" />
   <node name="joint_trajectory_controllers"
         pkg="controller_manager" type="spawner" output="screen"
-        args="--stopped
-              left_leg_controller
+        args="left_leg_controller
               right_leg_controller
               torso_controller
               head_controller
