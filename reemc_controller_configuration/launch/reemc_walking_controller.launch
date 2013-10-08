@@ -1,7 +1,0 @@
-<launch>
-  <!-- Walking controller -->
-  <rosparam file="$(find reemc_controller_configuration)/config/walking_params.yaml" command="load" ns="walking_controller" />
-
-  <include file="$(find reemc_controller_configuration)/launch/walking_controller.launch" /> 
-
-</launch>

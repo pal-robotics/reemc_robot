@@ -1,5 +1,5 @@
 loop_counter_factor: -1.0
-
+debug_backdoor: true
 biped_controller:
    delta_T: 0.005
    ft_sensor_z: 0.04

@@ -11,7 +11,8 @@
 
   <depend package="reemc_description"/>
   <depend package="robot_state_publisher"/>
-  <depend package="reem_head_action"/>
+  <depend package="play_motion"/>
+  <depend package="joy_teleop"/>
 </package>
 
 

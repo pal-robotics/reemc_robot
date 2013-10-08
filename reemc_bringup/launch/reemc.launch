@@ -1,12 +1,9 @@
 <launch>
-  <!-- Deployer -->
-  <!--TODO-->
-
   <!-- Robot model -->
   <include file="$(find reemc_description)/robots/upload_reemc.launch" />
 
   <!-- Controller configuration -->
-  <include file="$(find reemc_controller_configuration_gazebo)/launch/reemc_default_controllers.launch" />
+  <include file="$(find reemc_controller_configuration)/launch/default_controllers.launch" />
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
@@ -22,5 +19,4 @@
 
   <!-- Sitting application requirements -->
   <include file="$(find reemc_bringup)/launch/chair_sit.launch" />
-
 </launch>

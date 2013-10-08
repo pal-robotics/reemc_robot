@@ -128,62 +128,32 @@ right_arm_controller:
 
 right_hand_controller:
   type: "position_controllers/JointTrajectoryController"
-  joints: &hand_right_joints
+  joints:
+    - hand_right_index_joint
+    - hand_right_middle_joint
     - hand_right_thumb_joint
-    - hand_right_index_1_joint
-    - hand_right_index_2_joint
-    - hand_right_index_3_joint
-    - hand_right_middle_1_joint
-    - hand_right_middle_2_joint
-    - hand_right_middle_3_joint
 
-  gains:
-    hand_right_thumb_joint:    &thumb_gains    {p: 100, d: 80, i: 10, i_clamp: 1.5}
-    hand_right_index_1_joint:  &finger_1_gains {p: 100, d: 80, i: 10, i_clamp: 1.5}
-    hand_right_index_2_joint:  &finger_2_gains {p: 100, d: 80, i: 10, i_clamp: 1.5}
-    hand_right_index_3_joint:  &finger_3_gains {p: 100, d: 80, i: 10, i_clamp: 1.5}
-    hand_right_middle_1_joint: *finger_1_gains
-    hand_right_middle_2_joint: *finger_2_gains
-    hand_right_middle_3_joint: *finger_3_gains
-  joint_trajectory_action_node:
-    joints: *hand_right_joints
-    constraints:
-      goal_time: *goal_time_constraint
-      hand_right_thumb_joint:
-        goal: *goal_pos_constraint
-      hand_right_index_1_joint:
-        goal: *goal_pos_constraint
-      hand_right_middle_1_joint:
-        goal: *goal_pos_constraint
-      hand_right_middle_1_joint:
-        goal: *goal_pos_constraint
+  constraints:
+    goal_time: *goal_time_constraint
+    hand_right_index_joint:
+      goal: *goal_pos_constraint
+    hand_right_middle_joint:
+      goal: *goal_pos_constraint
+    hand_right_thumb:
+      goal: *goal_pos_constraint
 
 left_hand_controller:
   type: "position_controllers/JointTrajectoryController"
-  joints: &hand_left_joints
+  joints:
+    - hand_left_index_joint
+    - hand_left_middle_joint
     - hand_left_thumb_joint
-    - hand_left_index_1_joint
-    - hand_left_index_2_joint
-    - hand_left_index_3_joint
-    - hand_left_middle_1_joint
-    - hand_left_middle_2_joint
-    - hand_left_middle_3_joint
 
-  gains:
-    hand_left_thumb_joint:    *thumb_gains
-    hand_left_index_1_joint:  *finger_1_gains
-    hand_left_index_2_joint:  *finger_2_gains
-    hand_left_index_3_joint:  *finger_3_gains
-    hand_left_middle_1_joint: *finger_1_gains
-    hand_left_middle_2_joint: *finger_2_gains
-    hand_left_middle_3_joint: *finger_3_gains
-  joint_trajectory_action_node:
-    joints: *hand_left_joints
-    constraints:
-      goal_time: *goal_time_constraint
-      hand_left_thumb_joint:
-        goal: *goal_pos_constraint
-      hand_left_index_1_joint:
-        goal: *goal_pos_constraint
-      hand_left_middle_1_joint:
-        goal: *goal_pos_constraint
+  constraints:
+    goal_time: *goal_time_constraint
+    hand_left_index_joint:
+      goal: *goal_pos_constraint
+    hand_left_middle_joint:
+      goal: *goal_pos_constraint
+    hand_left_thumb:
+      goal: *goal_pos_constraint
