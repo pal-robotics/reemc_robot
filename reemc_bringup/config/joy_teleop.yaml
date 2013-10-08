@@ -23,7 +23,7 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: home
-      duration:
+      reach_time:
         secs: 3
     buttons: [8, 1]
 
@@ -32,7 +32,7 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: hands_front
-      duration:
+      reach_time:
         secs: 3
     buttons: [8, 0]
 
@@ -41,6 +41,6 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: small_squat
-      duration:
+      reach_time:
         secs: 3
     buttons: [8, 2]

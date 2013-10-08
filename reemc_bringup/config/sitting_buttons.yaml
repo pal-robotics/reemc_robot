@@ -4,7 +4,7 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: chair_sit
-      duration:
+      reach_time:
         secs: 3
     buttons: [9, 1]
   stand:
@@ -12,6 +12,6 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: stand_up
-      duration:
+      reach_time:
         secs: 3
     buttons: [9, 3]
