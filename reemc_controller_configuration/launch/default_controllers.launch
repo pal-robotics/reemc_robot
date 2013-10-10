@@ -1,8 +1,4 @@
 <launch>
-  <!-- Walking controller configuration -->
-  <rosparam command="load" file="$(find reemc_controller_configuration)/config/walking_params.yaml" ns="walking_controller" />
-  <rosparam command="load" file="$(find reemc_controller_configuration)/config/walking_controller.yaml" />
-
   <!-- Joint state controller -->
   <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
 
