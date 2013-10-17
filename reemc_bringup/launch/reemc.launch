@@ -3,6 +3,7 @@
   <include file="$(find reemc_description)/robots/upload_reemc.launch" />
 
   <!-- Controller configuration -->
+  <include file="$(find reemc_controller_configuration)/launch/load_walking_params.launch" />
   <include file="$(find reemc_controller_configuration)/launch/default_controllers.launch" />
 
   <!-- Robot state publisher -->

@@ -9,6 +9,7 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/reemc_bringup</url>
 
+  <depend package="reemc_controller_configuration"/>
   <depend package="reemc_description"/>
   <depend package="robot_state_publisher"/>
   <depend package="play_motion"/>
