@@ -13,7 +13,10 @@
   </node>
 
   <!-- Joystick controller -->
-  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch" />
+  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch">
+    <!-- TODO: remove this line when global mode switch is ready -->
+    <arg name="cmd_vel" value="walking_controller/cmd_vel" />
+  </include>
 
   <!-- Pre-recorded motions executor -->
   <include file="$(find reemc_bringup)/launch/play_motion.launch" />

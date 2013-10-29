@@ -11,7 +11,7 @@
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
-        args="joint_state_controller
-              force_torque_sensor_controller
-              imu_sensor_controller" />
+        args="force_torque_sensor_controller
+              imu_sensor_controller
+              joint_state_controller" />
 </launch>
