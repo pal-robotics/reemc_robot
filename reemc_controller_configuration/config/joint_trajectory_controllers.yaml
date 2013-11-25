@@ -22,6 +22,8 @@ left_leg_controller:
     leg_left_6_joint:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 right_leg_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -46,6 +48,8 @@ right_leg_controller:
     leg_right_6_joint:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 torso_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -59,6 +63,8 @@ torso_controller:
     torso_2_joint:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 head_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -71,6 +77,8 @@ head_controller:
       goal: *goal_pos_constraint
     head_2_joint:
       goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
 
 left_arm_controller:
   type: "position_controllers/JointTrajectoryController"
@@ -99,6 +107,8 @@ left_arm_controller:
     arm_left_7_joint:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 right_arm_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -126,6 +136,8 @@ right_arm_controller:
     arm_right_7_joint:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 right_hand_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -142,6 +154,8 @@ right_hand_controller:
     hand_right_thumb:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 left_hand_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -157,3 +171,5 @@ left_hand_controller:
       goal: *goal_pos_constraint
     hand_left_thumb:
       goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
