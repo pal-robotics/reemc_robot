@@ -1,4 +1,4 @@
-{leg_left_1_joint: 0.0, leg_left_2_joint: 0.006905807835214322, leg_left_3_joint: 0.01817769781340905,
- leg_left_4_joint: 0.0, leg_left_5_joint: -0.017562061158628912, leg_left_6_joint: -0.01018114747552366,
- leg_right_1_joint: 0.0, leg_right_2_joint: 0.006905807835214322, leg_right_3_joint: 0.01817769781340905,
- leg_right_4_joint: 0.0, leg_right_5_joint: -0.01879333446818919, leg_right_6_joint: -0.010902268664251966}
+{leg_left_1_joint: 0.0, leg_left_2_joint: 0.0027897254209611703, leg_left_3_joint: 0.002207011515460204,
+  leg_left_4_joint: 0.0, leg_left_5_joint: -0.0013745497624806135, leg_left_6_joint: -0.011098910050048708,
+  leg_right_1_joint: 0.0, leg_right_2_joint: 0.0027897254209611703, leg_right_3_joint: 0.002207011515460204,
+  leg_right_4_joint: 0.0, leg_right_5_joint: -0.0030394732684397947, leg_right_6_joint: 0.006674681416210656}
