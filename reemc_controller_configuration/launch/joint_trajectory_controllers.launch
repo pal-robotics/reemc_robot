@@ -1,0 +1,17 @@
+<launch>
+  <!-- Controller configuration -->
+  <rosparam command="load" file="$(find reemc_controller_configuration)/config/joint_trajectory_controllers.yaml" />
+
+  <!-- Spawn whole-body joint trajectory controllers -->
+  <node name="joint_trajectory_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="left_leg_controller
+              right_leg_controller
+              torso_controller
+              head_controller
+              left_arm_controller
+              right_arm_controller
+              left_hand_controller
+              right_hand_controller" />
+
+</launch>

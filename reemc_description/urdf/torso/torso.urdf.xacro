@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011-2012, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--File includes-->
+  <xacro:include filename="$(find reemc_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/torso/torso.transmission.xacro" />
+
+ <!--Constant parameters-->
+  <xacro:property name="torso_max_vel"  value="5.4" />
+  <xacro:property name="torso_max_effort"  value="44.64" />
+  <xacro:property name="torso_eps"      value="0.02" />
+
+  <xacro:macro name="reem_torso" params="name parent">
+    <!--************************-->
+    <!--        TORSO_1         -->
+    <!--************************-->
+    <link name="${name}_1_link">
+      <inertial>
+        <origin xyz="-0.00011 -0.00002 -0.00669" rpy="0 0 0" />
+        <mass value="1.58341" />
+        <!-- NOTE: Assuming cylinder with length="0.295" radius="0.0465-->
+         <inertia ixx="0.0036591855"  ixy="0.00000036753"  ixz="0.00000297759" iyy="0.00115955355" iyz="0.00000024742" izz="0.00360440105" />
+      </inertial>
+      <visual>
+        <origin rpy="${90.0 * deg_to_rad} 0 0" xyz="0 0 0"/>
+        <geometry>
+          <cylinder length="0.15" radius="0.0465"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+    </link>
+
+    <joint name="${name}_1_joint" type="revolute">
+      <parent link="${parent}"/>
+      <child link="${name}_1_link"/>
+      <origin xyz="0 0 0.14353" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="${-75.0 * deg_to_rad}" upper="${75.0 * deg_to_rad}" effort="${torso_max_effort}" velocity="${torso_max_vel}" />
+      <dynamics damping="1.0" friction="1.0"/>
+
+      <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="${-75.0 * deg_to_rad + torso_eps}"
+                         soft_upper_limit="${ 75.0 * deg_to_rad - torso_eps}" />
+    </joint>
+
+    <!--************************-->
+    <!--        TORSO_2         -->
+    <!--************************-->
+    <link name="${name}_2_link">
+      <inertial>
+        <origin xyz="-0.01816 -0.17956 -0.00103" rpy="0 0 0"/>
+        <mass value="11.18103" />
+        <!-- NOTE: Assuming box with d=0.2, w=0.295, h=0.254 -->
+         <inertia ixx="0.159836691"  ixy="-0.00377573015"  ixz="0.00094280162" iyy="0.08484637595" iyz="0.00020220508" izz="0.13253975464" />
+      </inertial>
+
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://reemc_description/meshes/torso/torso_2.dae" />
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reemc_description/meshes/torso/torso_2_collision.stl" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_2_joint" type="revolute">
+      <parent link="${name}_1_link" />
+      <child link="${name}_2_link" />
+      <origin xyz="0 0 0" rpy="${-90*deg_to_rad} 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="${-15.0 * deg_to_rad}" upper="${45.0 * deg_to_rad}" effort="${torso_max_effort}" velocity="${torso_max_vel}" />
+      <dynamics damping="1.0" friction="1.0"/>
+
+      <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="${-15.0 * deg_to_rad + torso_eps}"
+                         soft_upper_limit="${ 45.0 * deg_to_rad - torso_eps}" />
+    </joint>
+
+  <gazebo reference="${name}_1_link">
+     <mu1>0.9</mu1>
+     <mu2>0.9</mu2>
+   </gazebo>
+   <gazebo reference="${name}_2_link">
+     <mu1>0.9</mu1>
+     <mu2>0.9</mu2>
+   </gazebo>
+
+   <gazebo reference="${name}_1_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+   </gazebo>
+   <gazebo reference="${name}_2_joint">
+     <implicitSpringDamper>1</implicitSpringDamper>
+     <provideFeedback>1</provideFeedback>
+   </gazebo>
+
+    <!-- Torso Front Sonar Ring -->
+   <!-- torso sonar left -->
+   <xacro:range_reem name="${name}_sonar_01" parent="${name}_2" ros_topic="sonar_torso" update_rate="5" maxRange="0.7" minRange="0.005" fov="0.3491" radiation="ultrasound">
+      <origin xyz="0.10 -0.029 0" rpy="0.0 0.0 ${20*deg_to_rad}" />
+   </xacro:range_reem>
+
+   <!-- torso sonar right -->
+   <xacro:range_reem name="${name}_sonar_02" parent="${name}_2" ros_topic="sonar_torso" update_rate="5" maxRange="0.7" minRange="0.005" fov="0.3491" radiation="ultrasound">
+      <origin xyz="0.15 -0.18 0" rpy="0.0 0.0 0.0" />
+   </xacro:range_reem>
+
+   <!-- torso sonar back -->
+   <xacro:range_reem name="${name}_sonar_04" parent="${name}_2" ros_topic="sonar_torso" update_rate="5" maxRange="0.7" minRange="0.005" fov="0.3491" radiation="ultrasound">
+      <origin xyz="-0.17 -0.029 0.0" rpy="0.0 ${180.0*deg_to_rad} 0.0" />
+   </xacro:range_reem>
+
+
+    <!-- extensions -->
+    <xacro:reemc_torso_differential_transmission name="${name}" number1="1" number2="2"
+                                                act_reduction1="1.0" act_reduction2="1.0"
+                                                jnt_reduction1="1.0" jnt_reduction2="1.0" />
+  </xacro:macro>
+
+</robot>
+

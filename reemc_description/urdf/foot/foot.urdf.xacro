@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011-2012, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot name="reemc" xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+  <xacro:macro name="reemc_foot" params="name parent side reflect">
+
+    <link name="r_foot">
+    <inertial>
+      <mass value="0.867"/>
+      <origin rpy="0 -0 0" xyz="0.027 0 -0.067"/>
+      <inertia ixx="0.002" ixy="0" ixz="0" iyy="0.00350421" iyz="0" izz="0.00400651"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://reemc_description/meshes/leg/r_foot.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+    <!-- bottom -->
+    <collision group="default">
+      <origin rpy="0 0 0" xyz="0.048 0 -0.076119"/>
+      <geometry>
+        <box size="0.26 0.124887 0.01"/>
+      </geometry>
+    </collision>
+
+    <!-- contact model for foot surface -->
+    <gazebo reference="sole_{side}">
+      <kp>1000000.0</kp>
+      <kd>100.0</kd>
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+      <fdir1>1 0 0</fdir1>
+      <maxVel>1.0</maxVel>
+      <minDepth>0.0</minDepth>
+    </gazebo>
+  </link>
+<!--
+    <link name="sole_${side}">
+      <inertial>
+        <mass value="1.0"/>
+-->
+        <!--NOTE: Gazebo sees this link as leg_${side}_6_link -->
+        <!--NOTE: Moving CoM forward (+x) triggers leg spreading issue!-->
+<!--          <origin rpy="0 0 0" xyz="${reflect*0.105} ${-reflect*0.01} ${reflect*0.0}"/> 
+        <inertia ixx="0.003808333" ixy="0" ixz="0" iyy="0.005355333" iyz="0.0" izz="0.001813667"/>
+      </inertial>
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://reemc_description/meshes/leg/sole.stl" scale="1 ${-1*reflect} 1"/>
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision   group="default">
+        <origin rpy="0 0 0" xyz="${0.110 -0.085} ${0.071 -((1+reflect)*0.01 + 0.061)} 0.0005"/>
+        <geometry>
+          <box size="0.210 0.142 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+-->
+    <!-- contact model for foot surface -->
+<!--    <gazebo reference="sole_{side}">
+      <kp>6000000.0</kp>
+      <kd>1.0</kd>
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+      <fdir1>1 0 0</fdir1>
+      <maxVel>1.0</maxVel>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+-->
+<!--
+ <xacro:reemc_laser name="${side}_laser" parent="sole_${side}" ros_topic="${side}_scan" update_rate="10.0" min_angle="${-90*deg_to_rad}" max_angle="${90*deg_to_rad}" nrays="360" >
+      <origin xyz="${0.170 -0.085} ${0.071 -((1+reflect)*0.01 + 0.061)} 0.07" rpy="0 0 0" />
+    </xacro:reemc_laser>
+-->
+  </xacro:macro>
+</robot>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot name="reemc" xmlns:xacro="http://www.ros.org/wiki/xacro"
+        xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+        xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+
+  <!-- The following included files set up definitions of parts of the robot body -->
+  <xacro:include filename="$(find reemc_description)/urdf/foot/foot.urdf.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/deg_to_rad.xacro"/>
+  <!-- Generic simulator_gazebo plugins -->
+  <!--<xacro:include filename="$(find reemc_description)/gazebo/gazebo.urdf.xacro" />-->
+  <!-- Materials for visualization -->
+  <!--<xacro:include filename="$(find reemc_description)/urdf/materials.urdf.xacro" />-->
+
+  <!-- define global properties -->
+  <property name="M_PI" value="3.1415926535897931" />
+
+  <!-- Now we can start using the macros included above to define the actual robot -->
+  <xacro:reemc_foot name="foot" side="left" reflect="1.0" parent="luca"/>
+
+  <gazebo>
+    <!-- robot model offset -->
+    <pose>0 0 0.1 0 0 0</pose>
+  </gazebo>
+
+</robot>
+
+

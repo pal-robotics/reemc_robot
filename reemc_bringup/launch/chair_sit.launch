@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find reemc_bringup)/config/sitting_motions.yaml" />
+  <rosparam file="$(find reemc_bringup)/config/sitting_buttons.yaml" />
+</launch>

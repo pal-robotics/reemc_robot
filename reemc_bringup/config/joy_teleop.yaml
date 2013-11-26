@@ -1,0 +1,27 @@
+teleop:
+  home:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: home
+      reach_time:
+        secs: 3
+    buttons: [8, 1]
+
+  hands_front:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: hands_front
+      reach_time:
+        secs: 3
+    buttons: [8, 0]
+
+  small_squat:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: small_squat
+      reach_time:
+        secs: 3
+    buttons: [8, 2]

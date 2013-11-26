@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <!-- execute pre-recorded motions -->
+  <rosparam file="$(find reemc_bringup)/config/reemc_motions.yaml" command="load" />
+  <node pkg="play_motion" type="play_motion" name="play_motion" />
+
+</launch>
