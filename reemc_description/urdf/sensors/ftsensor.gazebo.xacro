@@ -19,17 +19,11 @@
        <contact>
          <collision>${name}_collision</collision>
        </contact>
-       <plugin filename="libgazebo_ros_forcetorque.so" name="${name}_ft_plugin">
-         <robotNamespace></robotNamespace>
-         <topicName>${name}_ft_data</topicName>
-         <frameName>${name}</frameName>
-         <updateRate>${update_rate}</updateRate>
-       </plugin>
-     </sensor>
-   </gazebo>
-   <gazebo reference="${name}">
-     <provideFeedback>1</provideFeedback>
-   </gazebo>
+   </sensor>
+</gazebo>
+<gazebo reference="${name}">
+  <provideFeedback>1</provideFeedback>
+</gazebo>
 
- </xacro:macro>
+</xacro:macro>
 </robot>
