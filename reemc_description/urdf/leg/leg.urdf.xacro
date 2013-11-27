@@ -282,29 +282,29 @@
      <fdir1>0 0 1</fdir1>
      <maxVel>1.0</maxVel>
      <minDepth>0.00</minDepth>
-     <implicitSpringDamper>1</implicitSpringDamper>
+     <cfmDamping>1</cfmDamping>
    </gazebo>
 
    <!--force torque sensor -->
    <!--xacro:reemc_force_torque_sensor name="leg_${side}_6_link"  update_rate="100.0"/-->
 
    <gazebo reference="leg_${side}_1_joint">
-      <implicitSpringDamper>1</implicitSpringDamper>
+      <cfmDamping>1</cfmDamping>
    </gazebo>
    <gazebo reference="leg_${side}_2_joint">
-      <implicitSpringDamper>1</implicitSpringDamper>
+      <cfmDamping>1</cfmDamping>
    </gazebo>
    <gazebo reference="leg_${side}_3_joint">
-      <implicitSpringDamper>1</implicitSpringDamper>
+      <cfmDamping>1</cfmDamping>
    </gazebo>
    <gazebo reference="leg_${side}_4_joint">
-      <implicitSpringDamper>1</implicitSpringDamper>
+      <cfmDamping>1</cfmDamping>
    </gazebo>
    <gazebo reference="leg_${side}_5_joint">
-      <implicitSpringDamper>1</implicitSpringDamper>
+      <cfmDamping>1</cfmDamping>
    </gazebo>
    <gazebo reference="leg_${side}_6_joint">
-     <implicitSpringDamper>1</implicitSpringDamper>
+     <cfmDamping>1</cfmDamping>
      <provideFeedback>1</provideFeedback>
    </gazebo>
 
