@@ -29,7 +29,7 @@
 
   <gazebo>
     <plugin filename="libgazebo_ros_force.so" name="gazebo_ros_force">
-      <bodyName>reemc::base_link</bodyName>
+      <bodyName>base_link</bodyName>
       <topicName>base_link_wrench</topicName>
     </plugin>
   </gazebo>
