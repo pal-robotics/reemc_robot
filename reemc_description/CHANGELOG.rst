@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.1 (2013-11-28)
+------------------
 * Add missing joint limits
 * Remove initial pose (overwritten anyway)
 * Fix namespacing
