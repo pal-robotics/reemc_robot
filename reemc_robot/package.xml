@@ -13,6 +13,7 @@
   <run_depend>reemc_description</run_depend>
   <run_depend>reemc_bringup</run_depend>
   <run_depend>reemc_controller_configuration</run_depend>
+  <run_depend>reemc_hardware</run_depend>
   <run_depend>reemc_user</run_depend>
 
   <export>
