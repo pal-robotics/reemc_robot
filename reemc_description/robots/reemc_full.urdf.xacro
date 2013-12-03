@@ -33,11 +33,7 @@
         <box size="0.3 0.35 0.14"/>
       </geometry>
     </collision>
- </link>
- <gazebo>
-    <!-- robot model offset -->
-    <pose>0 0 0.85 0 0 0</pose>
-  </gazebo>
+  </link>
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <xacro:include filename="$(find reemc_description)/urdf/leg/leg.urdf.xacro" />
