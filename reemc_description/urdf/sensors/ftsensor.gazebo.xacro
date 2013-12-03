@@ -14,22 +14,16 @@
   <gazebo reference="${name}">
     <sensor name="${name}_contact_sensor" type="contact">
       <pose>0.105 0.071 0 0 0 0</pose>
-       <always_on>1</always_on>
-       <update_rate>${update_rate}</update_rate>
-       <contact>
-         <collision>${name}_collision</collision>
-       </contact>
-       <plugin filename="libgazebo_ros_forcetorque.so" name="${name}_ft_plugin">
-         <robotNamespace></robotNamespace>
-         <topicName>${name}_ft_data</topicName>
-         <frameName>${name}</frameName>
-         <updateRate>${update_rate}</updateRate>
-       </plugin>
-     </sensor>
-   </gazebo>
-   <gazebo reference="${name}">
-     <provideFeedback>1</provideFeedback>
-   </gazebo>
+      <always_on>1</always_on>
+      <update_rate>${update_rate}</update_rate>
+      <contact>
+        <collision>${name}_collision</collision>
+      </contact>
+    </sensor>
+  </gazebo>
+  <gazebo reference="${name}">
+    <provideFeedback>1</provideFeedback>
+  </gazebo>
 
- </xacro:macro>
+</xacro:macro>
 </robot>
