@@ -64,7 +64,7 @@
     </gazebo>
 
     <gazebo reference="${hand_name}_${hand_side}_${finger_name}_joint">
-       <implicitSpringDamper>1</implicitSpringDamper>
+       <cfmDamping>1</cfmDamping>
     </gazebo>
 
 
@@ -173,13 +173,13 @@
     </gazebo>
 
     <gazebo reference="${hand_name}_${hand_side}_${finger_name}_1_joint">
-       <implicitSpringDamper>1</implicitSpringDamper>
+       <cfmDamping>1</cfmDamping>
     </gazebo>
     <gazebo reference="${hand_name}_${hand_side}_${finger_name}_2_joint">
-       <implicitSpringDamper>1</implicitSpringDamper>
+       <cfmDamping>1</cfmDamping>
     </gazebo>
     <gazebo reference="${hand_name}_${hand_side}_${finger_name}_3_joint">
-       <implicitSpringDamper>1</implicitSpringDamper>
+       <cfmDamping>1</cfmDamping>
     </gazebo>
 
     <xacro:hand_finger_transmission finger_name="${hand_name}_${hand_side}_${finger_name}" actuator_reduction="1"/>
@@ -260,7 +260,7 @@
     </gazebo>
 
     <gazebo reference="${name}_${side}_thumb_joint">
-       <implicitSpringDamper>1</implicitSpringDamper>
+       <cfmDamping>1</cfmDamping>
     </gazebo>
 
 

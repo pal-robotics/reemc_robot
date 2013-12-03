@@ -158,13 +158,13 @@
     </gazebo>
 
     <gazebo reference="${name}_${side}_5_joint">
-        <implicitSpringDamper>1</implicitSpringDamper>
+        <cfmDamping>1</cfmDamping>
     </gazebo>
     <gazebo reference="${name}_${side}_6_joint">
-        <implicitSpringDamper>1</implicitSpringDamper>
+        <cfmDamping>1</cfmDamping>
     </gazebo>
     <gazebo reference="${name}_${side}_7_joint">
-        <implicitSpringDamper>1</implicitSpringDamper>
+        <cfmDamping>1</cfmDamping>
     </gazebo>
 
     <!-- extensions -->
