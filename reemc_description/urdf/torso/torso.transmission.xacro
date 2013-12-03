@@ -17,22 +17,22 @@
       <actuator name="${name}_${number1}_motor">
         <role>actuator1</role>
         <mechanicalReduction>${act_reduction1}</mechanicalReduction>
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </actuator>
       <actuator name="${name}_${number2}_motor">
         <role>actuator2</role>
         <mechanicalReduction>${act_reduction2}</mechanicalReduction>
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </actuator>
       <joint name="${name}_${number1}_joint">
         <role>joint1</role>
         <offset>0.0</offset>
         <mechanicalReduction>${jnt_reduction1}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <joint name="${name}_${number2}_joint">
         <role>joint2</role>
         <offset>0.0</offset>
         <mechanicalReduction>${jnt_reduction2}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
