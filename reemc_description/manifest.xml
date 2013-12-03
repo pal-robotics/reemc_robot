@@ -1,0 +1,10 @@
+<package>
+  <description brief="reemc_description">
+    This package contains the description (mechanical, kinematic, visual, etc.) of the REEM-C robot.
+  </description>
+  <author>Luca Marchionni</author>
+  <license>Creative Commons BY-NC-ND 3.0</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reemc</url>
+  <depend package="pr2_mechanism_model"/>
+</package>
