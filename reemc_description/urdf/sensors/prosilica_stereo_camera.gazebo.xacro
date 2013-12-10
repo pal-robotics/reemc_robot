@@ -28,7 +28,7 @@
           </clip>
         </camera>
     <camera name="right">
-          <pose>0 0 ${-hack_baseline} 0 0 0</pose>  <!-- the pose is wrt to head_2_link because gazebo does not support "fixed" joints -->
+          <pose>0 -${hack_baseline} 0 0 0 0</pose>  <!-- the pose is wrt /stereo_link which is the parent of stereo_optical_frame -->
           <horizontal_fov>${ hfov }</horizontal_fov>
           <image>
             <width>${image_width} </width>
