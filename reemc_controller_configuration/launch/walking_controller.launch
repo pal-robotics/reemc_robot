@@ -1,0 +1,6 @@
+<launch>
+  <!-- Spawn controller -->
+  <node name="walking_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="walking_controller" />
+</launch>

@@ -3,6 +3,7 @@
   <include file="$(find reemc_description)/robots/upload_reemc.launch" />
 
   <!-- Controller configuration -->
+  <include file="$(find reemc_controller_configuration)/launch/load_walking_params.launch" />
   <include file="$(find reemc_controller_configuration)/launch/default_controllers.launch" />
 
   <!-- Robot state publisher -->
@@ -12,8 +13,7 @@
   </node>
 
   <!-- Joystick controller -->
-  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch">
-  </include>
+  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch" />
 
   <!-- Pre-recorded motions executor -->
   <include file="$(find reemc_bringup)/launch/play_motion.launch" />
