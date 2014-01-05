@@ -18,6 +18,34 @@ teleop:
         target: linear.y
         scale: 0.3
 
+  head_left:
+    type: action
+    action_name: move_head
+    action_goal:
+      move_yaw_by: 0.3
+    buttons: [0]
+
+  head_right:
+    type: action
+    action_name: move_head
+    action_goal:
+      move_yaw_by: -0.3
+    buttons: [2]
+
+  head_up:
+    type: action
+    action_name: move_head
+    action_goal:
+      move_pitch_by: -0.3
+    buttons: [3]
+
+  head_down:
+    type: action
+    action_name: move_head
+    action_goal:
+      move_pitch_by: 0.3
+    buttons: [1]
+
   home:
     type: action
     action_name: play_motion
