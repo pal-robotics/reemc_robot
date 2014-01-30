@@ -1,5 +1,7 @@
 loop_counter_factor: -1.0
 debug_backdoor: true
+use_imu_yaw: false
+odom_pub_rate: 100.0
 biped_controller:
    delta_T: 0.005
    ft_sensor_z: 0.04
