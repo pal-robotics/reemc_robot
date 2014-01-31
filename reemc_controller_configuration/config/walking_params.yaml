@@ -1,7 +1,12 @@
 loop_counter_factor: -1.0
 debug_backdoor: true
+
 use_imu_yaw: false
-odom_pub_rate: 100.0
+
+odom_publish_rate: 100.0
+pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 0.1, 0.1, 0.1]
+twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 0.1, 0.1, 0.1]
+
 biped_controller:
    delta_T: 0.005
    ft_sensor_z: 0.04
