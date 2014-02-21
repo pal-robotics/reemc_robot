@@ -243,7 +243,7 @@
 
     <joint name="${side}_sole_joint" type="fixed">
       <!-- origin x taken from link_${side}_6_link/visual/origin/x above -->
-      <origin xyz="0.110 0.0 0.0" rpy="0.0 ${-90.0 * deg_to_rad} 0.0"/>
+      <origin xyz="0.117 0.0 0.0" rpy="0.0 ${-90.0 * deg_to_rad} 0.0"/>
       <axis xyz="0 0 1"/>
       <parent link="leg_${side}_6_link"/>
       <child link="${side}_sole_link"/>
@@ -316,7 +316,7 @@
     <xacro:reemc_leg_simple_transmission name="${name}" side="${side}" number="6" reduction="${leg_reduction}" />
 
    <xacro:reemc_laser name="${side}_laser" parent="${side}_sole_link" ros_topic="${side}_scan" update_rate="10.0" min_angle="${-90*deg_to_rad}" max_angle="${90*deg_to_rad}" nrays="360" >
-     <origin xyz="${0.170 -0.085} ${0.071 -((1+reflect)*0.01 + 0.061)} ${0.04}" rpy="0.0 0.0 ${-30.0*reflect*deg_to_rad}" />
+     <origin xyz="${0.170 -0.085} ${0.071 -((1+reflect)*0.01 + 0.061)} ${0.073}" rpy="0.0 0.0 ${-30.0*reflect*deg_to_rad}" />
     </xacro:reemc_laser>
 
   </xacro:macro>

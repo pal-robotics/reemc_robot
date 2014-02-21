@@ -16,7 +16,7 @@
 
  <!--Constant parameters-->
   <xacro:property name="torso_max_vel"  value="5.4" />
-  <xacro:property name="torso_max_effort"  value="44.64" />
+  <xacro:property name="torso_max_effort"  value="78.0" />
   <xacro:property name="torso_eps"      value="0.02" />
 
   <xacro:macro name="reem_torso" params="name parent">
