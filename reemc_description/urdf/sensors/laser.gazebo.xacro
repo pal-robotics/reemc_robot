@@ -37,7 +37,7 @@
       <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_laser" >
         <frameName>/${name}_link</frameName>
         <topicName>${ros_topic}</topicName>
-        <gaussianNoise>0.0</gaussianNoise>
+        <gaussianNoise>0.03</gaussianNoise>
         <hokuyoMinIntensity>101</hokuyoMinIntensity>
         <updateRate>${update_rate}</updateRate>
         <alwaysOn>true</alwaysOn>
