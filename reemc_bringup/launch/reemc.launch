@@ -14,11 +14,11 @@
     <param name="tf_prefix" type="string" value="" />
   </node>
 
+  <!-- Mobile base -->
+  <include file="$(find reemc_bringup)/launch/mobile_base.launch"/>
+
   <!-- Joystick controller -->
-  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch">
-    <!-- TODO: remove this line when global mode switch is ready -->
-    <arg name="cmd_vel" value="walking_controller/cmd_vel" />
-  </include>
+  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch"/>
 
   <!-- Pre-recorded motions executor -->
   <include file="$(find reemc_bringup)/launch/play_motion.launch" />
