@@ -8,6 +8,9 @@
     <param name="tf_prefix" type="string" value="" />
   </node>
 
+  <!-- TF lookup -->
+  <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
+
   <!-- Mobile base -->
   <include file="$(find reemc_bringup)/launch/mobile_base.launch" />
 
