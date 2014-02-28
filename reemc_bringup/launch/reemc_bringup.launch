@@ -1,0 +1,25 @@
+<launch>
+  <!-- Load default controllers -->
+  <include file="$(find reemc_controller_configuration)/launch/default_controllers.launch" />
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" type="string" value="" />
+  </node>
+
+  <!-- TF lookup -->
+  <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
+
+  <!-- Mobile base -->
+  <include file="$(find reemc_bringup)/launch/mobile_base.launch" />
+
+  <!-- Joystick controller -->
+  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch" />
+
+  <!-- Pre-recorded motions executor -->
+  <include file="$(find reemc_bringup)/launch/play_motion.launch" />
+
+  <!-- Sitting application requirements -->
+  <include file="$(find reemc_bringup)/launch/chair_sit.launch" />
+</launch>
