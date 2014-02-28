@@ -11,9 +11,9 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find reem_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find reem_description)/urdf/hand/hand.gazebo.xacro" />
-  <xacro:include filename="$(find reem_description)/urdf/hand/hand.transmission.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/hand/hand.gazebo.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/hand/hand.transmission.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="hand_friction" value="0.0" /> <!--TODO: Tune-->
@@ -78,14 +78,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_finger_1.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_finger_1.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_finger_1_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_finger_1_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
         </geometry>
       </collision>
     </link>
@@ -109,14 +109,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_finger_2.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_finger_2.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_finger_2_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_finger_2_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
         </geometry>
       </collision>
     </link>
@@ -140,14 +140,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_finger_3.dae" scale="1 1 ${-reflect * finger_reflect*1}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_finger_3.dae" scale="1 1 ${-reflect * finger_reflect*1}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_finger_3_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_finger_3_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
         </geometry>
       </collision>
     </link>
@@ -176,14 +176,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_palm.dae" scale="1 ${-reflect*1} 1" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_palm.dae" scale="1 ${-reflect*1} 1" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_palm_collision.stl" scale="1 ${-reflect} 1" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_palm_collision.stl" scale="1 ${-reflect} 1" />
         </geometry>
       </collision>
     </link>
@@ -224,14 +224,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_thumb.dae" scale="1 1 ${-reflect}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_thumb.dae" scale="1 1 ${-reflect}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reem_description/meshes/hand/hand_thumb_collision.stl" scale="1 1 ${-reflect}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_thumb_collision.stl" scale="1 1 ${-reflect}" />
         </geometry>
       </collision>
     </link>
