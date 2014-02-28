@@ -11,9 +11,9 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find reemc_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find reemc_description)/urdf/hand/hand.gazebo.xacro" />
-  <xacro:include filename="$(find reemc_description)/urdf/hand/hand.transmission.xacro" />
+  <xacro:include filename="$(find reem_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find reem_description)/urdf/hand/hand.gazebo.xacro" />
+  <xacro:include filename="$(find reem_description)/urdf/hand/hand.transmission.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="hand_friction" value="0.0" /> <!--TODO: Tune-->
@@ -66,7 +66,7 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="2.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
-      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${90.0 / 250.0}" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_1_link">
@@ -78,14 +78,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_finger_1.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_finger_1.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_finger_1_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_finger_1_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
         </geometry>
       </collision>
     </link>
@@ -97,7 +97,7 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
-      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${80.0 / 250.0}" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_2_link">
@@ -109,14 +109,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_finger_2.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_finger_2.dae" scale="1 1 ${-reflect * finger_reflect * 1}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_finger_2_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_finger_2_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
         </geometry>
       </collision>
     </link>
@@ -128,7 +128,7 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
-      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${80.0 / 250.0}" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_3_link">
@@ -140,14 +140,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_finger_3.dae" scale="1 1 ${-reflect * finger_reflect*1}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_finger_3.dae" scale="1 1 ${-reflect * finger_reflect*1}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_finger_3_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_finger_3_collision.stl" scale="1 1 ${-reflect * finger_reflect}" />
         </geometry>
       </collision>
     </link>
@@ -170,20 +170,20 @@
     <link name="${name}_${side}_palm_link">
       <inertial>
         <origin xyz="0.05904 ${-reflect * 0.00925} -0.00075 " rpy="0 0 0" /> <!--TODO: This does not make sense!, there must be a bug in how Gazebo bungles the CoM of a chain of fixed joints-->
-        <mass value="0.68275" /> 
+        <mass value="0.68275" />
         <inertia ixx="0.00045643484"  ixy="0.00001885321"  ixz="-0.0000103596" iyy="0.00076077407" iyz="-0.00000266311" izz="0.00052521525" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_palm.dae" scale="1 ${-reflect*1} 1" />
+          <mesh filename="package://reem_description/meshes/hand/hand_palm.dae" scale="1 ${-reflect*1} 1" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_palm_collision.stl" scale="1 ${-reflect} 1" />
+          <mesh filename="package://reem_description/meshes/hand/hand_palm_collision.stl" scale="1 ${-reflect} 1" />
         </geometry>
       </collision>
     </link>
@@ -211,7 +211,7 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${ 0.0 * deg_to_rad + hand_eps}"
+                         soft_lower_limit="${ 0.0 * deg_to_rad}"
                          soft_upper_limit="${90.0 * deg_to_rad - hand_eps}" />
     </joint>
 
@@ -224,14 +224,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_thumb.dae" scale="1 1 ${-reflect*1}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_thumb.dae" scale="1 1 ${-reflect}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_thumb_collision.stl" scale="1 1 ${-reflect}" />
+          <mesh filename="package://reem_description/meshes/hand/hand_thumb_collision.stl" scale="1 1 ${-reflect}" />
         </geometry>
       </collision>
     </link>
