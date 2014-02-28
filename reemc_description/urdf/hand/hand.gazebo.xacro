@@ -66,19 +66,19 @@
     </gazebo>
 
     <gazebo reference="${finger_name}_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
       <provideFeedback>1</provideFeedback>
     </gazebo>
     <gazebo reference="${finger_name}_1_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
       <provideFeedback>1</provideFeedback>
     </gazebo>
     <gazebo reference="${finger_name}_2_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
       <provideFeedback>1</provideFeedback>
     </gazebo>
     <gazebo reference="${finger_name}_3_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
       <provideFeedback>1</provideFeedback>
     </gazebo>
 

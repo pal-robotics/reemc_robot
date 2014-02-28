@@ -110,7 +110,7 @@
         </geometry>
         <material name="LightGrey" />
       </visual>
-      <collision group="default">
+      <collision>
         <origin rpy="0 ${90* deg_to_rad} 0" xyz="0.15 0 ${-reflect*0.015}"/>
         <geometry>
           <box size="0.15 0.10 0.20"/>
@@ -145,7 +145,7 @@
         </geometry>
         <material name="LightGrey" />
       </visual>
-      <collision group="default">
+      <collision>
         <origin rpy="0 ${-reflect* 90* deg_to_rad} 0" xyz="0.15 0 ${-reflect*0.015}"/>
         <geometry>
           <box size="0.15 0.10 0.20"/>
@@ -282,29 +282,29 @@
      <fdir1>0 0 1</fdir1>
      <maxVel>1.0</maxVel>
      <minDepth>0.00</minDepth>
-     <cfmDamping>1</cfmDamping>
+     <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
 
    <!--force torque sensor -->
    <!--xacro:reemc_force_torque_sensor name="leg_${side}_6_link"  update_rate="100.0"/-->
 
    <gazebo reference="leg_${side}_1_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${side}_2_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${side}_3_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${side}_4_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${side}_5_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${side}_6_joint">
-     <cfmDamping>1</cfmDamping>
+     <implicitSpringDamper>1</implicitSpringDamper>
      <provideFeedback>1</provideFeedback>
    </gazebo>
 

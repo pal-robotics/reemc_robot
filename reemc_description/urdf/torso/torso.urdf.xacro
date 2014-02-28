@@ -103,10 +103,10 @@
    </gazebo>
 
    <gazebo reference="${name}_1_joint">
-      <cfmDamping>1</cfmDamping>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="${name}_2_joint">
-     <cfmDamping>1</cfmDamping>
+     <implicitSpringDamper>1</implicitSpringDamper>
      <provideFeedback>1</provideFeedback>
    </gazebo>
 

@@ -247,7 +247,7 @@
     </gazebo>
 
     <gazebo reference="${name}_${side}_thumb_joint">
-       <cfmDamping>1</cfmDamping>
+       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
 
