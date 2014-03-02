@@ -1,0 +1,11 @@
+<launch>
+  <!-- Configure walking controller for full body -->
+  <rosparam command="delete" param="walking_controller/joints" />
+  <rosparam command="load"
+    file="$(find reemc_controller_configuration)/config/walking_controller.yaml" />
+
+  <!-- Spawn controller -->
+  <node name="walking_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="walking_controller" />
+</launch>

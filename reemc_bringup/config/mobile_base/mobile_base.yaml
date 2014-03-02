@@ -1,0 +1,8 @@
+reduce_speed_on_ramp    : false
+ramp_linear_speed_limit : 0.0
+ramp_angular_speed_limit: 0.0
+max_pitch               : 1.0
+max_roll                : 1.0
+
+control_loop_frequency: 50.0
+

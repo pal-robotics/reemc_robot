@@ -2,7 +2,10 @@
   <!-- Robot model -->
   <include file="$(find reemc_description)/robots/upload_reemc.launch" />
 
-  <!-- Controller configuration -->
+  <!-- Diff drive controller parameters -->
+  <include file="$(find reemc_controller_configuration)/launch/load_walking_params.launch" />
+
+  <!-- Load default controllers -->
   <include file="$(find reemc_controller_configuration)/launch/default_controllers.launch" />
 
   <!-- Robot state publisher -->
@@ -11,9 +14,11 @@
     <param name="tf_prefix" type="string" value="" />
   </node>
 
+  <!-- Mobile base -->
+  <include file="$(find reemc_bringup)/launch/mobile_base.launch"/>
+
   <!-- Joystick controller -->
-  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch">
-  </include>
+  <include file="$(find reemc_bringup)/launch/joystick_teleop.launch"/>
 
   <!-- Pre-recorded motions executor -->
   <include file="$(find reemc_bringup)/launch/play_motion.launch" />

@@ -12,7 +12,6 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:macro name="range_reem_gazebo" params="name ros_topic update_rate maxRange minRange fov radiation" >
-
     <gazebo reference="${name}_link">
       <sensor type="ray" name="${name}">
         <pose>0 0 0 0 0 0</pose>
@@ -39,7 +38,7 @@
             <resolution>0.01</resolution>
           </range>
         </ray>
-        <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_laser">
+        <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
           <gaussianNoise>0.005</gaussianNoise>
           <alwaysOn>true</alwaysOn>
           <updateRate>${update_rate}</updateRate>
@@ -51,7 +50,7 @@
           <radiation>${radiation}</radiation>
         </plugin>
       </sensor>
-    </gazebo>
+    </gazebo>  
   </xacro:macro>
 
 </robot>
