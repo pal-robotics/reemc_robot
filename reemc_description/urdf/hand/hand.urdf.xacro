@@ -66,7 +66,11 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="2.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+<<<<<<< HEAD
       <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${90.0 / 250.0}" offset="0.0" />
+=======
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
+>>>>>>> e9e5c6467aeccba25e0afbb05d6cb0703c688af8
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_1_link">
@@ -97,7 +101,11 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+<<<<<<< HEAD
       <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${80.0 / 250.0}" offset="0.0" />
+=======
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
+>>>>>>> e9e5c6467aeccba25e0afbb05d6cb0703c688af8
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_2_link">
@@ -128,7 +136,11 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+<<<<<<< HEAD
       <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${80.0 / 250.0}" offset="0.0" />
+=======
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
+>>>>>>> e9e5c6467aeccba25e0afbb05d6cb0703c688af8
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_3_link">
@@ -170,7 +182,11 @@
     <link name="${name}_${side}_palm_link">
       <inertial>
         <origin xyz="0.05904 ${-reflect * 0.00925} -0.00075 " rpy="0 0 0" /> <!--TODO: This does not make sense!, there must be a bug in how Gazebo bungles the CoM of a chain of fixed joints-->
+<<<<<<< HEAD
         <mass value="0.68275" />
+=======
+        <mass value="0.68275" /> 
+>>>>>>> e9e5c6467aeccba25e0afbb05d6cb0703c688af8
         <inertia ixx="0.00045643484"  ixy="0.00001885321"  ixz="-0.0000103596" iyy="0.00076077407" iyz="-0.00000266311" izz="0.00052521525" />
       </inertial>
       <visual>

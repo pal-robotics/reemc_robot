@@ -66,6 +66,7 @@
     </gazebo>
 
     <gazebo reference="${finger_name}_joint">
+<<<<<<< HEAD
       <implicitSpringDamper>1</implicitSpringDamper>
       <provideFeedback>1</provideFeedback>
     </gazebo>
@@ -79,6 +80,21 @@
     </gazebo>
     <gazebo reference="${finger_name}_3_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
+=======
+      <cfmDamping>1</cfmDamping>
+      <provideFeedback>1</provideFeedback>
+    </gazebo>
+    <gazebo reference="${finger_name}_1_joint">
+      <cfmDamping>1</cfmDamping>
+      <provideFeedback>1</provideFeedback>
+    </gazebo>
+    <gazebo reference="${finger_name}_2_joint">
+      <cfmDamping>1</cfmDamping>
+      <provideFeedback>1</provideFeedback>
+    </gazebo>
+    <gazebo reference="${finger_name}_3_joint">
+      <cfmDamping>1</cfmDamping>
+>>>>>>> e9e5c6467aeccba25e0afbb05d6cb0703c688af8
       <provideFeedback>1</provideFeedback>
     </gazebo>
 
