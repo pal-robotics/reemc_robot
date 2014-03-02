@@ -9,7 +9,7 @@
 -->
 <robot name="reemc" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="reemc_imu" params="name parent update_rate">
+  <xacro:macro name="reemc_imu" params="name parent update_rate *origin">
     <link name="${name}_link">
       <inertial>
         <mass value="0.01"/>
@@ -24,9 +24,9 @@
       </visual>
     </link>
     <joint name="imu_joint" type="fixed">
+      <insert_block name="origin"/>
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0.0 0 0.0" rpy="0 0 0"/>
     </joint>
   </xacro:macro>
 

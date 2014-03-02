@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011, PAL Robotics, S.L.
+  Copyright (c) 2011-2014, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -39,9 +39,9 @@
 
     <link name="${hand_name}_${hand_side}_${finger_name}_link">
       <inertial>
-        <origin xyz="0.00175 -0.01837 -0.00198" rpy="0 0 0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00175 -0.01837 -0.00198" rpy="0 0 0" />
         <mass value="0.055" />
-        <inertia ixx="0.00001450121"  ixy="-0.00000065488"  ixz="-0.00000039654" iyy="0.0000072995" iyz="0.00000012168" izz="0.00001262409" /> <!--TODO: Fill up-->
+        <inertia ixx="0.00001450121"  ixy="-0.00000065488"  ixz="-0.00000039654" iyy="0.0000072995" iyz="0.00000012168" izz="0.00001262409" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -58,16 +58,6 @@
       </collision>
     </link>
 
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_link">
-      <mu1>0.9</mu1>
-      <mu2>0.9</mu2>
-    </gazebo>
-
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_joint">
-       <cfmDamping>1</cfmDamping>
-    </gazebo>
-
-
     <!-- Read-only phalanxes-->
     <joint name="${hand_name}_${hand_side}_${finger_name}_1_joint" type="revolute">
       <parent link="${hand_name}_${hand_side}_palm_link" />
@@ -76,13 +66,14 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="2.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${90.0 / 250.0}" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_1_link">
       <inertial>
-        <origin xyz="0.00175 -0.01837 -0.00198" rpy="0 0 0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00175 -0.01837 -0.00198" rpy="0 0 0" />
         <mass value="0.055" />
-        <inertia ixx="0.00001450121"  ixy="-0.00000065488"  ixz="-0.00000039654" iyy="0.0000072995" iyz="0.00000012168" izz="0.00001262409" /> <!--TODO: Fill up-->
+        <inertia ixx="0.00001450121"  ixy="-0.00000065488"  ixz="-0.00000039654" iyy="0.0000072995" iyz="0.00000012168" izz="0.00001262409" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -106,13 +97,14 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${80.0 / 250.0}" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_2_link">
       <inertial>
-        <origin xyz="0.00181 -0.01275 -0.00064" rpy="0 0 0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00181 -0.01275 -0.00064" rpy="0 0 0" />
         <mass value="0.02972" />
-        <inertia ixx="0.00000428193"  ixy="-0.00000049978"  ixz="-0.00000002985" iyy="0.00000254434" iyz="0.00000007762" izz="0.00000345152" /> <!--TODO: Fill up-->
+        <inertia ixx="0.00000428193"  ixy="-0.00000049978"  ixz="-0.00000002985" iyy="0.00000254434" iyz="0.00000007762" izz="0.00000345152" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -136,13 +128,14 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="${80.0 / 250.0}" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_3_link">
       <inertial>
-        <origin xyz="0 -0.00704 0.00019" rpy="0 0 0" /> <!--TODO: Fill up-->
+        <origin xyz="0 -0.00704 0.00019" rpy="0 0 0" />
         <mass value="0.01522" />
-        <inertia ixx="0.00000128478"  ixy="-0.00000008056"  ixz="-0.00000001698" iyy="0.00000080139" iyz="-0.00000002884" izz="0.00000090928" /> <!--TODO: Fill up-->
+        <inertia ixx="0.00000128478"  ixy="-0.00000008056"  ixz="-0.00000001698" iyy="0.00000080139" iyz="-0.00000002884" izz="0.00000090928" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -159,28 +152,8 @@
       </collision>
     </link>
 
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_1_link">
-      <mu1>0.9</mu1>
-      <mu2>0.9</mu2>
-    </gazebo>
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_2_link">
-      <mu1>0.9</mu1>
-      <mu2>0.9</mu2>
-    </gazebo>
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_3_link">
-      <mu1>0.9</mu1>
-      <mu2>0.9</mu2>
-    </gazebo>
 
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_1_joint">
-       <cfmDamping>1</cfmDamping>
-    </gazebo>
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_2_joint">
-       <cfmDamping>1</cfmDamping>
-    </gazebo>
-    <gazebo reference="${hand_name}_${hand_side}_${finger_name}_3_joint">
-       <cfmDamping>1</cfmDamping>
-    </gazebo>
+    <xacro:hand_finger_gazebo finger_name="${hand_name}_${hand_side}_${finger_name}"/>
 
     <xacro:hand_finger_transmission finger_name="${hand_name}_${hand_side}_${finger_name}" actuator_reduction="1"/>
   </xacro:macro>
@@ -196,10 +169,9 @@
 
     <link name="${name}_${side}_palm_link">
       <inertial>
-        <!--<origin xyz="0.07547 ${-reflect * 0.00468} 0.00291" rpy="0 0 0" />-->
-        <origin xyz="0 ${-reflect * 0.07547} 0 " rpy="0 0 0" /> <!--TODO: This does not make sense!, there must be a bug in how Gazebo bungles the CoM of a chain of fixed joints-->
-        <mass value="0.41066" /> <!--NOTE: Assigning 0.05kg to each of the ten phalanxes-->
-        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+        <origin xyz="0.05904 ${-reflect * 0.00925} -0.00075 " rpy="0 0 0" /> <!--TODO: This does not make sense!, there must be a bug in how Gazebo bungles the CoM of a chain of fixed joints-->
+        <mass value="0.68275" />
+        <inertia ixx="0.00045643484"  ixy="0.00001885321"  ixz="-0.0000103596" iyy="0.00076077407" iyz="-0.00000266311" izz="0.00052521525" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -216,6 +188,16 @@
       </collision>
     </link>
 
+    <gazebo reference="${name}_${side}_palm_link">
+     <kp>1000000.0</kp>
+     <kd>100.0</kd>
+     <mu1>1.0</mu1>
+     <mu2>1.0</mu2>
+     <fdir1>0 0 1</fdir1>
+     <maxVel>1.0</maxVel>
+     <minDepth>0.00</minDepth>
+    </gazebo>
+
     <xacro:hand_gazebo name="${name}_${side}_palm"/>
 
     <!-- Thumb -->
@@ -229,20 +211,20 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${ 0.0 * deg_to_rad + hand_eps}"
+                         soft_lower_limit="${ 0.0 * deg_to_rad}"
                          soft_upper_limit="${90.0 * deg_to_rad - hand_eps}" />
     </joint>
 
     <link name="${name}_${side}_thumb_link">
       <inertial>
-        <origin xyz="0.00049 0.04179 0.00451" rpy="0 0 0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00049 0.00451 ${-reflect*0.04179}" rpy="0 0 0" />
         <mass value="0.07088" />
-        <inertia ixx="0.0000699364"  ixy="0.00000345915"  ixz="0.00000425008" iyy="0.00002675459" iyz="0.00002381865" izz="0.00004787167" /> <!--TODO: Fill up-->
+        <inertia ixx="0.0000699364"  ixy="0.00000345915"  ixz="0.00000425008" iyy="0.00002675459" iyz="0.00002381865" izz="0.00004787167" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/hand/hand_thumb.dae" scale="1 1 ${-reflect*1}" />
+          <mesh filename="package://reemc_description/meshes/hand/hand_thumb.dae" scale="1 1 ${-reflect}" />
         </geometry>
         <material name="LightGrey" />
       </visual>
@@ -255,12 +237,17 @@
     </link>
 
     <gazebo reference="${name}_${side}_thumb_link">
-      <mu1>0.9</mu1>
-      <mu2>0.9</mu2>
+     <kp>1000000.0</kp>
+     <kd>100.0</kd>
+     <mu1>1.0</mu1>
+     <mu2>1.0</mu2>
+     <fdir1>0 0 1</fdir1>
+     <maxVel>1.0</maxVel>
+     <minDepth>0.00</minDepth>
     </gazebo>
 
     <gazebo reference="${name}_${side}_thumb_joint">
-       <cfmDamping>1</cfmDamping>
+       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
 

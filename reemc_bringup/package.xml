@@ -13,6 +13,7 @@
   <run_depend>reemc_controller_configuration</run_depend>
   <run_depend>reemc_description</run_depend>
   <run_depend>robot_state_publisher</run_depend>
+  <run_depend>pal_mobile_base</run_depend>
   <run_depend>joy_teleop</run_depend>
   <run_depend>play_motion</run_depend>
 

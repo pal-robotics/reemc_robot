@@ -1,4 +1,29 @@
 teleop:
+  walk:
+    type: topic
+    message_type: geometry_msgs/Twist
+    topic_name: cmd_vel
+    deadman_buttons: [4]
+    axis_mappings:
+      -
+        axis: 1
+        target: linear.x
+        scale: 0.5
+      -
+        axis: 0
+        target: angular.z
+        scale: 0.5
+      -
+        axis: 2
+        target: linear.y
+        scale: 0.3
+
+  joy_priority:
+    type: action
+    action_name: joy_priority_action
+    buttons: [0]
+
+  # undocumented poses, with 'back' button
   home:
     type: action
     action_name: play_motion
@@ -8,20 +33,59 @@ teleop:
         secs: 3
     buttons: [8, 1]
 
-  hands_front:
+  hands_walk:
     type: action
     action_name: play_motion
     action_goal:
-      motion_name: hands_front
-      reach_time:
-        secs: 3
-    buttons: [8, 0]
-
-  small_squat:
-    type: action
-    action_name: play_motion
-    action_goal:
-      motion_name: small_squat
+      motion_name: hands_walk
       reach_time:
         secs: 3
     buttons: [8, 2]
+
+  # documented motions, with right upper button and right trigger
+  # see SDE4 documentation
+  wave:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: wave
+      reach_time:
+        secs: 1
+    buttons: [5, 1]
+
+  bow:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: bow
+      reach_time:
+        secs: 1
+    buttons: [5, 0]
+
+  open_arms:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: open_arms
+      reach_time:
+        secs: 1
+    buttons: [5, 3]
+
+  shake_hand:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: shake_hand
+      reach_time:
+        secs: 1
+    buttons: [5, 2]
+
+  point_front_left:
+    type: action
+    action_name: play_motion
+    action_goal:
+      motion_name: point_front_left
+      reach_time:
+        secs: 1
+    buttons: [7, 0]
+
