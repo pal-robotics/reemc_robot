@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011, PAL Robotics, S.L.
+  Copyright (c) 2014, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -71,20 +71,19 @@
 
   <!-- stereo camera -->
   <!-- IMPORTANT: focal_length = image_width/(2tan(hfov/2)) --> 
-  <xacro:reemc_stereo_camera parent="head_2_link" name="stereo" focal_length="461.941850" hfov="${71.0*deg_to_rad}" image_format="B8G8R8" image_width="659" image_height="493">
+  <xacro:reemc_stereo_camera parent="head_2_link" name="stereo" focal_length="461.943804" hfov="${71.0*deg_to_rad}" image_format="B8G8R8" image_width="659" image_height="493">
 <!-- The following transformations expresses the pose of the stereo_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  head_2_link. -->
     <origin xyz="0.08203  -0.0935  0.0365" rpy="1.56293 -0.00855922 -0.0201307" />
   </xacro:reemc_stereo_camera>
 
-  <xacro:reemc_back_camera parent="torso_2_link" name="back_camera" focal_length="376.003507" hfov="${89.999451423*deg_to_rad}" image_format="B8G8R8" image_width="752" image_height="480" >
+  <xacro:reemc_back_camera parent="torso_2_link" name="back_camera" focal_length="376.002379" hfov="${89.999451423*deg_to_rad}" image_format="B8G8R8" image_width="752" image_height="480" >
     <!-- The following transformations expresses the pose of the back_camera_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  torso_2_link. -->
     <origin xyz="-0.128 -0.317 0" rpy="${-90.0*deg_to_rad} 0 ${180.0*deg_to_rad}" />
   </xacro:reemc_back_camera>
 
   <!-- imu -->
-  <xacro:reemc_imu name="imu" parent="base_link" update_rate="100.0"/>
+  <xacro:reemc_imu name="imu" parent="base_link" update_rate="100.0">
+    <origin xyz="0 0 0" rpy="${180.0*deg_to_rad} 0 0"/>
+  </xacro:reemc_imu>
 
 </robot>
-
-
-

@@ -68,7 +68,7 @@
     </gazebo>
 
     <gazebo reference="${name}_joint">
-       <cfmDamping>1</cfmDamping>
+       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
 
@@ -125,7 +125,7 @@
     </gazebo>
 
     <gazebo reference="${name}_joint">
-       <cfmDamping>1</cfmDamping>
+       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
 
