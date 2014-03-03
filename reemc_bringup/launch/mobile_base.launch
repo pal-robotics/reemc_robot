@@ -1,15 +1,15 @@
 <launch>
 
-  <include file="$(find pal_mobile_base)/launch/mobile_base.launch">
+  <include file="$(find twist_mux)/launch/twist_mux.launch">
     <arg name="imu" value="base_imu"/>
 
     <arg name="cmd_vel_out" value="walking_controller/cmd_vel"/>
 
-    <arg name="config"        value="$(find reemc_bringup)/config/mobile_base/mobile_base.yaml"/>
-    <arg name="config_locks"  value="$(find reemc_bringup)/config/mobile_base/mobile_base_locks.yaml"/>
-    <arg name="config_topics" value="$(find reemc_bringup)/config/mobile_base/mobile_base_topics.yaml"/>
+    <arg name="config"        value="$(find reemc_bringup)/config/twist_mux/twist_mux.yaml"/>
+    <arg name="config_locks"  value="$(find reemc_bringup)/config/twist_mux/twist_mux_locks.yaml"/>
+    <arg name="config_topics" value="$(find reemc_bringup)/config/twist_mux/twist_mux_topics.yaml"/>
 
-    <arg name="config_joy" value="$(find reemc_bringup)/config/mobile_base/joystick.yaml"/>
+    <arg name="config_joy" value="$(find reemc_bringup)/config/twist_mux/joystick.yaml"/>
   </include>
 
 </launch>
