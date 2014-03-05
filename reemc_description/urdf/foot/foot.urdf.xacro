@@ -26,7 +26,7 @@
       </geometry>
     </visual>
     <!-- bottom -->
-    <collision group="default">
+    <collision>
       <origin rpy="0 0 0" xyz="0.048 0 -0.076119"/>
       <geometry>
         <box size="0.26 0.124887 0.01"/>
