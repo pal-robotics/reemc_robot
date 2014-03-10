@@ -22,4 +22,8 @@
 
   <!-- Sitting application requirements -->
   <include file="$(find reemc_bringup)/launch/chair_sit.launch" />
+
+  <!-- Arm motions executor while walking -->
+  <include file="$(find reemc_bringup)/launch/walk_pose.launch" />
+
 </launch>
