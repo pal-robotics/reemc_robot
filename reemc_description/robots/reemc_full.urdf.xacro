@@ -50,7 +50,7 @@
   <xacro:include filename="$(find reemc_description)/urdf/sensors/laser.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/stereo_camera.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/back_camera.urdf.xacro" />
-  
+
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find reemc_description)/gazebo/gazebo.urdf.xacro" />
   <!-- Materials for visualization -->
