@@ -11,7 +11,8 @@
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
-        args="force_torque_sensor_controller
+        args="--timeout 120
+              force_torque_sensor_controller
               imu_sensor_controller
               joint_state_controller" />
 </launch>
