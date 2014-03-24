@@ -1,0 +1,21 @@
+approach_planner:
+  planning_groups: # Sorted by order of preference
+    - left_arm
+    - right_arm
+    - left_arm_torso
+    - right_arm_torso
+    - both_arms
+    - both_arms_torso
+
+  exclude_from_planning_joints:
+    - head_1_joint
+    - head_2_joint
+    - hand_right_thumb_joint
+    - hand_right_index_joint
+    - hand_right_middle_joint
+    - hand_left_thumb_joint
+    - hand_left_index_joint
+    - hand_left_middle_joint
+
+  joint_tolerance: 0.01
+  skip_planning_approach_vel: 0.5
