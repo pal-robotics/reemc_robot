@@ -15,4 +15,6 @@
               force_torque_sensor_controller
               imu_sensor_controller
               joint_state_controller" />
+
+  <include file="$(find reemc_controller_configuration)/launch/half_walking_half_jtc.launch" />
 </launch>
