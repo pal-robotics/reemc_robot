@@ -16,5 +16,6 @@
               imu_sensor_controller
               joint_state_controller" />
 
-  <include file="$(find reemc_controller_configuration)/launch/half_walking_half_jtc.launch" />
+  <!-- Running the walking controller on the startup is still dangerous in the robot -->
+  <!--include file="$(find reemc_controller_configuration)/launch/half_walking_half_jtc.launch" /-->
 </launch>
