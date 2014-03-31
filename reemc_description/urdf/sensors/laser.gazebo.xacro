@@ -21,7 +21,7 @@
       <update_rate>${update_rate}</update_rate>
       <ray>
         <scan>
-	  <horizontal>
+          <horizontal>
             <samples>${nrays}</samples>
             <resolution>1</resolution>
             <min_angle>${min_angle}</min_angle>
