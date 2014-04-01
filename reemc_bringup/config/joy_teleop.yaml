@@ -29,8 +29,6 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: home
-      reach_time:
-        secs: 3
     buttons: [8, 1]
 
   hands_walk:
@@ -38,8 +36,6 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: hands_walk
-      reach_time:
-        secs: 3
     buttons: [8, 2]
 
   # documented motions, with right upper button and right trigger
@@ -49,8 +45,6 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: wave
-      reach_time:
-        secs: 1
     buttons: [5, 1]
 
   bow:
@@ -58,8 +52,6 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: bow
-      reach_time:
-        secs: 1
     buttons: [5, 0]
 
   open_arms:
@@ -67,17 +59,13 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: open_arms
-      reach_time:
-        secs: 1
     buttons: [5, 3]
 
   shake_hand:
     type: action
     action_name: play_motion
     action_goal:
-      motion_name: shake_hand
-      reach_time:
-        secs: 1
+      motion_name: shake_right
     buttons: [5, 2]
 
   point_front_left:
@@ -85,7 +73,4 @@ teleop:
     action_name: play_motion
     action_goal:
       motion_name: point_front_left
-      reach_time:
-        secs: 1
     buttons: [7, 0]
-
