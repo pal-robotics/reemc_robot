@@ -16,7 +16,7 @@ com_stabilizer:
    ds_y_p: 0.6
    ss_x_p: 1.0
    ss_y_p: 1.0
-  
+
 zmp_solver:
    z_lipm: 0.7
 
