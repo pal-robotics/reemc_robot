@@ -1,6 +1,6 @@
 <launch>
   <!-- Load default controllers -->
-  <include file="$(find reemc_controller_configuration)/launch/default_controllers.launch" />
+  <include file="$(find reemc_controller_configuration)/launch/bringup_controllers.launch" />
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">

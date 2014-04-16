@@ -1,21 +1,34 @@
 <launch>
-  <!-- Joint state controller -->
-  <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
-
-  <!-- Force-torque sensors controller -->
-  <rosparam command="load" file="$(find force_torque_sensor_controller)/force_torque_sensor_controller.yaml" />
-
-  <!-- IMU sensors controller -->
-  <rosparam command="load" file="$(find imu_sensor_controller)/imu_sensor_controller.yaml" />
-
-  <!-- Controllers that come up started -->
-  <node name="default_controllers_spawner"
+  <!-- Spawn upper-body joint trajectory controllers -->
+  <node name="upper_body_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
-        args="--timeout 120
-              force_torque_sensor_controller
-              imu_sensor_controller
-              joint_state_controller" />
+        args="torso_controller
+              head_controller
+              left_arm_controller
+              right_arm_controller
+              left_hand_controller
+              right_hand_controller" />
 
-  <!-- Running the walking controller on the startup is still dangerous in the robot -->
-  <!--include file="$(find reemc_controller_configuration)/launch/half_walking_half_jtc.launch" /-->
+  <!-- Configure walking controller for lower-body only -->
+  <rosparam command="delete" param="walking_controller/joints" />
+  <rosparam command="load"
+    file="$(find reemc_controller_configuration)/config/walking_controller_lowerbody.yaml" />
+
+  <!-- Spawn walking controller -->
+  <node name="walking_controller_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="walking_controller" />
+
+  <!-- Point head action -->
+  <group ns="head_controller">
+    <node name="point_head_action" pkg="reem_head_action" type="reem_head_action" output="screen" >
+      <rosparam>
+        pan_link:  head_1_link
+        tilt_link: head_2_link
+        success_angle_threshold: 0.01
+      </rosparam>
+    </node>
+  </group>
+
+  <include file="$(find reemc_controller_configuration)/launch/half_walking_half_jtc.launch" />
 </launch>

@@ -33,7 +33,7 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${  0.0 * deg_to_rad + hand_eps}"
+                         soft_lower_limit="${  0.0 * deg_to_rad}"
                          soft_upper_limit="${250.0 * deg_to_rad - hand_eps}" />
     </joint>
 
