@@ -15,5 +15,6 @@
   <run_depend>controller_manager</run_depend>
   <run_depend>joint_state_controller</run_depend>
   <run_depend>walking_controller</run_depend>
+  <run_depend>reemc_init_offset_controller</run_depend>
 
 </package>
