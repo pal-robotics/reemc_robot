@@ -30,5 +30,4 @@
     </node>
   </group>
 
-  <include file="$(find reemc_controller_configuration)/launch/half_walking_half_jtc.launch" />
 </launch>
