@@ -1,0 +1,4 @@
+joint_mode_controller:
+  type: joint_mode_controller/JointModeController
+  mode_handle: 'leg_left_4_joint'
+  joint_mode: 1 #position
