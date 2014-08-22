@@ -1,4 +1,15 @@
 joint_mode_controller:
   type: joint_mode_controller/JointModeController
-  mode_handle: 'leg_right_4_joint'
-  joint_mode: 3 # effort
+  mode_handles:
+    leg_left_1_joint:  'hardware_interface/EffortJointInterface'
+    leg_left_2_joint:  'hardware_interface/EffortJointInterface'
+    leg_left_3_joint:  'hardware_interface/EffortJointInterface'
+    leg_left_4_joint:  'hardware_interface/EffortJointInterface'
+    leg_left_5_joint:  'hardware_interface/EffortJointInterface'
+    leg_left_6_joint:  'hardware_interface/EffortJointInterface'
+    leg_right_1_joint: 'hardware_interface/EffortJointInterface'
+    leg_right_2_joint: 'hardware_interface/EffortJointInterface'
+    leg_right_3_joint: 'hardware_interface/EffortJointInterface'
+    leg_right_4_joint: 'hardware_interface/EffortJointInterface'
+    leg_right_5_joint: 'hardware_interface/EffortJointInterface'
+    leg_right_6_joint: 'hardware_interface/EffortJointInterface'
