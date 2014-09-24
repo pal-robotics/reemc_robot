@@ -1,11 +1,8 @@
 <launch>
 
   <include file="$(find twist_mux)/launch/twist_mux.launch">
-    <arg name="imu" value="base_imu"/>
-
     <arg name="cmd_vel_out" value="walking_controller/cmd_vel"/>
 
-    <arg name="config"        value="$(find reemc_bringup)/config/twist_mux/twist_mux.yaml"/>
     <arg name="config_locks"  value="$(find reemc_bringup)/config/twist_mux/twist_mux_locks.yaml"/>
     <arg name="config_topics" value="$(find reemc_bringup)/config/twist_mux/twist_mux_topics.yaml"/>
 
