@@ -17,8 +17,12 @@
   <!--Constant parameters-->
   <xacro:property name="wrist_friction"       value="1.0" />
   <xacro:property name="wrist_damping"        value="1.0" />
-  <xacro:property name="wrist_max_vel"      value="1.77" />
-  <xacro:property name="wrist_max_effort"   value="3.32" />
+  <xacro:property name="wrist_1_max_vel"      value="1.95" />
+  <xacro:property name="wrist_2_max_vel"      value="1.76" />
+  <xacro:property name="wrist_3_max_vel"      value="1.76" />
+  <xacro:property name="wrist_1_max_effort"   value="3" />
+  <xacro:property name="wrist_2_max_effort"   value="6.6" />
+  <xacro:property name="wrist_3_max_effort"   value="6.6" />
   <xacro:property name="wrist_eps"          value="0.02" />
 
   <!-- TODO: Update dynamic models -->
@@ -58,7 +62,7 @@
       <child link="${name}_${side}_5_link" />
       <origin xyz="-0.088 0.02 0" rpy="0 ${-90.0 * reflect * deg_to_rad} 0" />
       <axis xyz="0 0 1" />
-      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_max_effort}" velocity="${wrist_max_vel}" /> <!--TODO: Check effort value!-->
+      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" /> <!--TODO: Check effort value!-->
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
 
       <safety_controller k_position="20"
@@ -96,7 +100,7 @@
       <child link="${name}_${side}_6_link" />
       <origin xyz="0 0 ${0.15 * reflect}" rpy="${-90.0 * reflect * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
-      <limit lower="${-90.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${wrist_max_effort}" velocity="${wrist_max_vel}" />
+      <limit lower="${-90.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
 
       <safety_controller k_position="20"
@@ -135,7 +139,7 @@
       <child link="${name}_${side}_7_link" />
       <origin xyz="0 0 0" rpy="${90.0 * reflect * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
-      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_max_effort}" velocity="${wrist_max_vel}" />
+      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_3_max_effort}" velocity="${wrist_3_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
 
       <safety_controller k_position="20"
