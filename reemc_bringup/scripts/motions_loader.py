@@ -50,16 +50,20 @@ def load_params_from_yaml(complete_file_path):
 
 if __name__ == '__main__':
     rp = RosPack()
+    print "Loading public motions from: " + PUBLIC_PKG_NAME
+    pub_pkg_path = rp.get_path(PUBLIC_PKG_NAME)
+    pub_config_yaml = PUBLIC_CONFIG_YAML
+    pub_full_path = pkg_path + '/config/' + pub_config_yaml
+    load_params_from_yaml(pub_full_path)
     print "Trying to find private package: " + PRIVATE_PKG_NAME
     try:
         pkg_path = rp.get_path(PRIVATE_PKG_NAME)
         config_yaml = PRIVATE_CONFIG_YAML
+	    full_path = pkg_path + '/config/' + config_yaml
+	    print "Loading params from: " +  full_path
+	    load_params_from_yaml(full_path)
     except ResourceNotFound:
-        print "Not found, falling back to public contents in: " + PUBLIC_PKG_NAME
-        pkg_path = rp.get_path(PUBLIC_PKG_NAME)
-        config_yaml = PUBLIC_CONFIG_YAML
-    full_path = pkg_path + '/config/' + config_yaml
-    print "Loading params from: " +  full_path
-    load_params_from_yaml(full_path)
-    print "Done."
+        print "Not found, only using public motions."
+
+    print "Finished."
     
