@@ -1,62 +1,34 @@
 play_motion:
+  controllers: [right_arm_controller, left_arm_controller, left_leg_controller, right_leg_controller,
+    head_controller, torso_controller]
   motions:
-    hands_walk:
-      joints: [arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint,
-        arm_right_7_joint, arm_left_1_joint, arm_left_2_joint,
-        arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, torso_1_joint, torso_2_joint, head_1_joint,
-        head_2_joint, hand_right_thumb_joint, hand_right_index_joint,
-        hand_right_middle_joint, hand_left_thumb_joint, hand_left_index_joint,
-        hand_left_middle_joint]
-      points:
-      - positions: [-0.44, 0.26, 0.0, 0.88, 0.0, 0.0, 0.0, -0.44, 0.26, 0.0,
-        0.88, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.5, 3.5, 0.0, 3.5, 3.5]
-        time_from_start: 0.0
     hands_front:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
+      joints: [arm_right_3_joint, arm_right_4_joint, arm_right_1_joint, arm_left_4_joint,
+        arm_left_1_joint, arm_left_2_joint, arm_right_2_joint, arm_left_3_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 1.2, 0.3, -1.0, 1.65, 0.0, 0.0, 0.0, 1.2, 0.3, -1.0, 1.65,
-                    0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - positions: [-1.0, 1.65, 1.2, 1.65, 1.2, 0.3, 0.3, -1.0]
         time_from_start: 0.0
     hands_up:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
+      joints: [torso_2_joint, arm_right_6_joint, arm_right_5_joint, arm_left_5_joint,
+        torso_1_joint, arm_left_4_joint, head_2_joint, arm_right_2_joint, arm_left_3_joint,
+        head_1_joint, arm_right_7_joint, arm_right_3_joint, arm_right_4_joint, arm_right_1_joint,
+        arm_left_1_joint, arm_left_2_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, 0.34, 0.9, 0.2, -1.6, 1.3, -0.5, 0.0, 0.0, 1.2, 0.0, -1.6, 1.4,
-                    -0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, -0.5, -0.5, 0.0, 1.3, 0.34, 0.0, -1.6, 0.0, 0.0, -1.6,
+          1.4, 1.2, 0.9, 0.2]
         time_from_start: 0.0
-    raise_left_hand:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
+    home:
+      joints: [arm_left_7_joint, leg_left_1_joint, arm_right_6_joint, torso_2_joint,
+        arm_right_5_joint, arm_left_5_joint, arm_left_6_joint, arm_left_1_joint, torso_1_joint,
+        arm_left_4_joint, head_2_joint, leg_right_3_joint, leg_left_2_joint, arm_right_2_joint,
+        leg_left_6_joint, head_1_joint, leg_right_6_joint, arm_right_7_joint, arm_right_3_joint,
+        leg_left_5_joint, leg_right_4_joint, arm_right_4_joint, arm_left_3_joint,
+        leg_right_1_joint, leg_left_4_joint, leg_right_5_joint, arm_left_2_joint,
+        arm_right_1_joint, leg_right_2_joint, leg_left_3_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, 0.34, 1.7, -0.1, -1.7, 1.5708, 0.0, 0.0, 0.0, 1.2, 0.0, -1.6, 1.4,
-                    -0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-    receive_object_left:
-      joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
-        arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.45, 0.02, 0.038, 1.51, 0.539, -0.279, -0.619]
-        time_from_start: 0.0
-    receive_object_right:
-      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.45, 0.02, 0.038, 1.51, 0.539, -0.279, -0.619]
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+          0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+          0.0, 0.0]
         time_from_start: 0.0
     small_squat:
       joints: [leg_left_4_joint, leg_right_3_joint, leg_right_5_joint, leg_left_5_joint,
@@ -64,6 +36,24 @@ play_motion:
       points:
       - positions: [1.0, -0.5, -0.5, -0.5, 1.0, -0.5]
         time_from_start: 0.0
+    test_motion:
+      joints: [torso_2_joint, arm_right_6_joint, arm_right_5_joint, arm_left_5_joint,
+        torso_1_joint, arm_left_4_joint, head_2_joint, arm_right_2_joint, arm_left_3_joint,
+        head_1_joint, arm_right_7_joint, arm_right_3_joint, arm_right_4_joint, arm_right_1_joint,
+        arm_left_1_joint, arm_left_2_joint]
+      points:
+      - positions: [0.0, 0.0, -0.5, -0.5, 0.0, 1.3, 0.34, 0.0, -1.6, 0.0, 0.0, -1.6,
+          1.4, 1.2, 0.9, 0.2]
+        time_from_start: 0.0
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 1.65, 0.0, 0.2, -1.0, 0.0, 0.0, -1.0,
+          1.65, 1.2, 1.2, 0.3]
+        velocities: [0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.5, 0.5, 0.0, 0.0, 0.5,
+          0.5, 0.5, 0.5, 0.5]
+        time_from_start: 3.0
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+          0.0, 0.0, 0.0, 0.0]
+        time_from_start: 6.0
+
     squat:
       joints: [arm_left_7_joint, leg_left_1_joint, arm_right_6_joint, torso_2_joint,
         arm_right_5_joint, arm_left_5_joint, arm_left_6_joint, arm_left_1_joint, torso_1_joint,
@@ -77,437 +67,3 @@ play_motion:
           0.0, 1.3, 0.0, 0.0, 0.0, 0.0, 0.0, -1.3, 2.6, 0.9, 0.0, 0.0, 2.6, -1.3,
           1.3, 0.0, 0.0, -1.35]
         time_from_start: 0.0
-
-    # inherited from REEM-H3
-    # *********************
-    arms_t:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.707, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0,
-          0.707, 0.0, 0.1, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      meta:
-        name: Arms T
-        usage: posture
-        description: Both arms set straight pointing sideways at 45 degrees.
-    bow:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.4, 0.0, 0.3, -0.1, 0.1, -0.05, 0.6109, 0.0, 0.0, 0.0, -0.1,
-          0.1, -0.05, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.5
-      - positions: [0.0, 0.4, 0.0, 0.3, -0.1, 0.1, -0.05, 0.6109, 0.0, 0.0, 0.0, -0.1,
-          0.1, -0.05, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 3.25
-      meta:
-        name: Bow
-        usage: greet
-        description: Makes a short reverence with both arms back.
-    center_head:
-      joints: [head_1_joint, head_2_joint]
-      points:
-      - positions: [0.0, 0.0]
-        time_from_start: 0.0
-      meta:
-        name: Center Head
-        usage: posture
-        description: Moves only head to a centered posture.
-    home: # NOTE: arm_*_2_joint is nonzero!
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1,
-          0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      meta:
-        name: Home
-        usage: posture
-        description: Both arms down and completely stretched.
-    home_legs:
-      joints: [leg_left_1_joint, leg_left_2_joint, leg_left_3_joint, leg_left_4_joint,
-               leg_left_5_joint, leg_left_6_joint,
-               leg_right_1_joint, leg_right_2_joint, leg_right_3_joint,leg_right_4_joint,
-               leg_right_5_joint, leg_right_6_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-    interact_to_rest:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.4, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0,
-          0.4, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 1.15
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 2.5
-      meta:
-        name: Interact to Rest
-        usage: specific
-        description: Moves from Interact to Rest postures.
-    interact:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      meta:
-        name: Interact
-        usage: posture
-        description: Same posture as in Hands Down.
-    open_arms:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, -0.1, 0.0, 0.1, 0.4, 0.2, -0.25, 1.66, 0.0, 0.22, 0.0, 0.4,
-          0.2, -0.25, 1.66, 0.0, 0.22, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 1.5
-      - positions: [0.0, -0.15, 0.0, 0.15, 0.54, 0.27, 0.0, 1.58, 0.0, 0.29, 0.0,
-          0.54, 0.27, 0.0, 1.58, 0.0, 0.29, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 2.1
-      - positions: [0.0, -0.1, 0.0, 0.1, 0.4, 0.2, 0.2, 1.36, 0.0, 0.27, 0.0, 0.4,
-          0.2, 0.2, 1.36, 0.0, 0.27, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 3.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 5.0
-      meta:
-        name: Open Arms
-        usage: emphasize
-        description: Symmetric circular motion of both arms.
-    point_front_left:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, -0.1, 1.0, 0.17, -0.9, 0.8, 0.6, 0.2, 0.4, -0.2,
-          0.25, -0.1, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.0, 0.0, 0.0, -0.1, 1.0, 0.17, -0.9, 0.8, 0.6, 0.2, 0.4, -0.2,
-          0.25, -0.1, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 3.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 5.0
-      meta:
-        name: Point Front Left
-        usage: show
-        description: Points front with the left hand.
-    salute:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, 2.0,
-          0.6, -1.1, 2.05, -0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 3.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, 2.0,
-          0.6, -1.1, 2.05, -0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 5.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, -0.2,
-          0.4, -0.1, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 7.75
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 8.5
-      meta:
-        name: Salute
-        usage: greet
-        description: Right arm military salute.
-    shake_left:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [-0.1, -0.1, 0.1, 0.1, 0.0, 0.22, -0.2, 1.2, 0.1, -0.1, 0.0, -0.175,
-          0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 1.5
-      - positions: [-0.2, -0.1, 0.2, 0.1, 0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0,
-          -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 2.5
-      - positions: [-0.2, -0.1, 0.2, 0.1, 0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0,
-          -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 3.25
-      - positions: [-0.2, -0.09, 0.2, 0.15, 0.4, 0.15, -0.5, 0.7, 0.1, -0.2, 0.0,
-          -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 4.0
-      - positions: [-0.2, -0.1, 0.2, 0.15, 0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0,
-          -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 4.75
-      - positions: [-0.2, -0.09, 0.2, 0.1, 0.4, 0.15, -0.5, 0.7, 0.1, -0.2, 0.0, -0.175,
-          0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 5.5
-      - positions: [-0.2, -0.1, 0.2, 0.1, 0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0,
-          -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 6.25
-      - positions: [-0.2, -0.1, 0.2, 0.1, 0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0,
-          -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 7.0
-      - positions: [-0.1, -0.1, 0.1, 0.1, 0.0, 0.22, -0.2, 1.2, 0.1, -0.1, 0.0, -0.175,
-          0.17, -0.175, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 8.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 9.5
-      meta:
-        name: Shake Left
-        usage: greet
-        description: Left arm handshaking.
-    shake_right:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.1, -0.1, -0.1, 0.1, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.0, 0.22, -0.2, 1.2, 0.1, -0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 1.5
-      - positions: [0.2, -0.1, -0.2, 0.1, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 2.5
-      - positions: [0.2, -0.1, -0.2, 0.1, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 3.25
-      - positions: [0.2, -0.09, -0.2, 0.15, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.4, 0.15, -0.5, 0.7, 0.1, -0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 4.0
-      - positions: [0.2, -0.1, -0.2, 0.15, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 4.75
-      - positions: [0.2, -0.09, -0.2, 0.1, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.4, 0.15, -0.5, 0.7, 0.1, -0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 5.5
-      - positions: [0.2, -0.1, -0.2, 0.1, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 6.25
-      - positions: [0.2, -0.1, -0.2, 0.1, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.35, 0.15, -0.45, 0.95, 0.1, -0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 7.0
-      - positions: [0.1, -0.1, -0.1, 0.1, -0.175, 0.17, -0.175, 0.6, 0.0, 0.0, 0.0,
-          0.0, 0.22, -0.2, 1.2, 0.1, -0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 8.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 9.5
-      meta:
-        name: Shake Right
-        usage: greet
-        description: Right arm handshaking.
-    wave:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, -0.2,
-          0.15, -0.1, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, 0.4,
-          0.15, 0.4, 2.0, -1.4, 0.6, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 3.0
-      - positions: [0.0, 0.0, 0.0, 0.25, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, 0.4,
-          0.4, -0.4, 2.0, -1.4, 0.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 4.2
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, 0.4,
-          0.15, 0.4, 2.0, -1.4, 0.6, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 5.4
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.15, -0.1, 0.4, 0.0, 0.0, 0.0, -0.2,
-          0.15, -0.1, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 7.6
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 8.3
-      meta:
-        name: Wave
-        usage: greet
-        description: Waves with right hand and nodes.
-    were_here:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.1, 0.0, 0.3, 0.0, 0.15, 0.18, 1.05, 0.7, 0.2, 0.7, 0.0,
-          0.15, 0.18, 1.05, 0.7, 0.2, 0.7]
-        time_from_start: 1.8
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 3.6
-      meta:
-        name: We're Here
-        usage: emphasize
-        description: Opens both arms with palms up.
-    'no':
-      joints: [head_1_joint]
-      points:
-      - positions: [0.0]
-        time_from_start: 0.0
-      - positions: [0.4]
-        time_from_start: 0.7
-      - positions: [-0.4]
-        time_from_start: 1.8
-      - positions: [0.0]
-        time_from_start: 2.5
-      meta:
-        name: 'No'
-        usage: reply
-        description: Moves head left-right.
-    rest_to_interact:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.4, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0,
-          0.4, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 1.35
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 2.5
-      meta:
-        name: Rest to Interact
-        usage: specific
-        description: Moves from Rest to Interact postures.
-    rest:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint, hand_right_thumb_joint,
-        hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      meta:
-        name: Rest
-        usage: posture
-        description: Both arms down and in front of the robot.
-    'yes':
-      joints: [head_2_joint]
-      points:
-      - positions: [0.0]
-        time_from_start: 0.0
-      - positions: [0.345]
-        time_from_start: 0.75
-      - positions: [0.0]
-        time_from_start: 1.5
-      meta:
-        name: 'Yes'
-        usage: reply
-        description: Moves head up-down.
-    open_both_hands:
-      joints: [hand_right_thumb_joint, hand_right_index_joint, hand_right_middle_joint,
-               hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint]
-      points:
-      - positions: [1.5, 0.0, 0.0, 1.5, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 1.5
-    close_both_hands:
-      joints: [hand_right_thumb_joint, hand_right_index_joint, hand_right_middle_joint,
-               hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint]
-      points:
-      - positions: [1.5, 0.0, 0.0, 1.5, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [1.5, 3.5, 3.5, 1.5, 3.5, 3.5]
-        time_from_start: 2.5
-    open_right_hand:
-      joints: [hand_right_thumb_joint, hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [1.5, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0]
-        time_from_start: 1.5
-    close_right_hand:
-      joints: [hand_right_thumb_joint, hand_right_index_joint, hand_right_middle_joint]
-      points:
-      - positions: [1.5, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [1.5, 3.5, 3.5]
-        time_from_start: 2.5
-    open_left_hand:
-      joints: [hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint]
-      points:
-      - positions: [1.5, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0]
-        time_from_start: 1.5
-    close_left_hand:
-      joints: [hand_left_thumb_joint, hand_left_index_joint, hand_left_middle_joint]
-      points:
-      - positions: [1.5, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [1.5, 3.5, 3.5]
-        time_from_start: 2.5

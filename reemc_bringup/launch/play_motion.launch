@@ -3,7 +3,7 @@
 <launch>
 
   <!-- execute pre-recorded motions -->
-  <rosparam file="$(find reemc_bringup)/config/reemc_motions.yaml" command="load" />
+  <node pkg="reemc_bringup" type="motions_loader.py" name="motions_loader" />
   <node pkg="play_motion" type="play_motion" name="play_motion">
     <rosparam file="$(find reemc_bringup)/config/approach_planner.yaml" command="load" />
   </node>
