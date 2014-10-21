@@ -9,3 +9,9 @@ foreach(dir config launch)
     install(DIRECTORY ${dir}/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
+
+install(PROGRAMS
+   scripts/motions_loader.py
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
