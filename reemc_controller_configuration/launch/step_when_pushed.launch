@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="walking_controller" type="step_when_pushed" name="step_when_pushed">
+    <param name="x_forward_th" value="0.05" />
+    <param name="x_backward_th" value="-0.04" />
+    <param name="y_left_th" value="0.045" />
+    <param name="y_right_th" value="-0.045" />
+  </node>
+
+</launch>

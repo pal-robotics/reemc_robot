@@ -74,3 +74,10 @@ teleop:
     action_goal:
       motion_name: point_front_left
     buttons: [7, 0]
+
+  step_when_pushed:
+    type: action
+    action_name: step_when_pushed
+    action_goal:
+      active: 1
+    buttons: [4,5, 6, 7, 1]
