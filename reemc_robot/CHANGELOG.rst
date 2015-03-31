@@ -1,0 +1,13 @@
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package reemc_robot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Forthcoming
+-----------
+* Remove reemc_hardware from package.xml because it is in reemc_hardware_proprietary
+* Remove not existing package reemc_user
+* Move reemc_hardware back inside reemc_robot
+* reemc_robot: changelog is not needed here (maybe later)
+* reemc_robot: remove dependency on reemc_hardware_test
+* reemc_robot: add metapackage
+* Contributors: Luca Marchionni, Paul Mathieu
