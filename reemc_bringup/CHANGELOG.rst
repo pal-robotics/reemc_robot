@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.2 (2015-03-31)
+------------------
 * Fix indent typo and an error
 * Now we always load the public motions first, then try to load the proprietary ones. Also updated some motions
 * Adding the loading of motions depending on what motions are available in the workspace

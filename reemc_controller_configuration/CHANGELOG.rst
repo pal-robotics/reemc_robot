@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.2 (2015-03-31)
+------------------
 * added offsets for reemc-3 (legs soft offsets)
 * Change reem_head_action with head_action and fix deps
 * Extend config files for switch to handle lists
