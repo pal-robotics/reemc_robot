@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>reemc_controller_configuration_reemc_2</name>
+  <version>0.9.2</version>
+  <description>REEMC-2 specific controller configuration</description>
+
+  <maintainer email="luca.marchionni@pal-robotics.com">Luca Marchionni</maintainer>
+  <author email="luca.marchionni@pal-robotics.com">Luca Marchionni</author> -->
+
+  <license>TODO</license>
+
+  <replace>reemc_controller_configuration</replace>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>reemc_controller_configuration</run_depend>
+
+</package>

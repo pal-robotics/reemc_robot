@@ -1,0 +1,21 @@
+loop_counter_factor: -1.0
+debug_backdoor: true
+
+use_imu_yaw: false
+
+odom_publish_rate: 100.0
+pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 0.1, 0.1, 0.1]
+twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 0.1, 0.1, 0.1]
+
+biped_controller:
+   delta_T: 0.005
+   ft_sensor_z: 0.04
+   variable_joint_offset: -0.9
+   swing_foot_z: 0.03
+   z_lipm: 0.7
+com_stabilizer:
+   ds_x_p: 0.8
+   ds_y_p: 0.6
+   ss_x_p: 1.0
+   ss_y_p: 1.0
+  
