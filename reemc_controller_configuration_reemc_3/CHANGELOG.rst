@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration_reemc_3
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.3 (2015-04-08)
+------------------
 
 * Add specific configuration packages for REEM-C robots
 * Contributors: Luca Marchionni
