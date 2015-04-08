@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add reemc_moveit_config dependency
+* Contributors: Luca Marchionni
+
 0.9.2 (2015-03-31)
 ------------------
 * Fix indent typo and an error

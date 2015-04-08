@@ -2,6 +2,9 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.2 (2015-03-31)
 ------------------
 * Updated max velocity limits and effort for the arms of reemc

@@ -2,6 +2,9 @@
 Changelog for package reemc_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.2 (2015-03-31)
 ------------------
 * Remove reemc_hardware from package.xml because it is in reemc_hardware_proprietary
