@@ -2,6 +2,11 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add head_action dependency
+* Contributors: Luca Marchionni
+
 0.9.3 (2015-04-08)
 ------------------
 

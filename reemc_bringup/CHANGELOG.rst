@@ -2,6 +2,9 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.3 (2015-04-08)
 ------------------
 * Add reemc_moveit_config dependency
