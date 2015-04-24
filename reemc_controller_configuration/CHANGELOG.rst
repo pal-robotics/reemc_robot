@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.5 (2015-04-24)
+------------------
 * Added missing dependencty imu controller and force torque controller
 * Contributors: Hilario Tome
 
