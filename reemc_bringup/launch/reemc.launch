@@ -6,6 +6,9 @@
   <rosparam command="load"
     file="$(find reemc_controller_configuration)/config/joint_trajectory_controllers.yaml" />
 
+  <!-- Load current limit controllers (not done in simulation) -->
+  <include file="$(find reemc_controller_configuration)/launch/current_limit_controllers.launch" />
+
   <!-- Robot model -->
   <include file="$(find reemc_description)/robots/upload_reemc.launch" />
 
