@@ -169,6 +169,7 @@
     </gazebo>
     <gazebo reference="${name}_${side}_7_joint">
         <implicitSpringDamper>1</implicitSpringDamper>
+        <provideFeedback>1</provideFeedback>
     </gazebo>
 
     <!-- extensions -->

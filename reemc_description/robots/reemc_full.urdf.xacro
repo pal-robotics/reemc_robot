@@ -44,12 +44,15 @@
   <!-- Arm -->
   <xacro:include filename="$(find reemc_description)/urdf/arm/arm.urdf.xacro" />
   <!-- Hand -->
-  <xacro:include filename="$(find reemc_description)/urdf/hand/hand.urdf.xacro" /> 
+<!--  <xacro:include filename="$(find reemc_description)/urdf/hand/hand.urdf.xacro" /> -->
+  <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
+
   <!-- Sensors -->
   <xacro:include filename="$(find reemc_description)/urdf/sensors/imu.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/laser.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/stereo_camera.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/back_camera.urdf.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/sensors/ftsensor.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find reemc_description)/gazebo/gazebo.urdf.xacro" />
@@ -66,9 +69,22 @@
   <xacro:reem_head  name="head"  parent="torso_2_link"/>
   <xacro:reem_arm name="arm" parent="torso_2_link" side="right" reflect="1.0"  />
   <xacro:reem_arm name="arm" parent="torso_2_link" side="left"  reflect="-1.0" />
-  <xacro:reem_hand name="hand" parent="arm_right_tool_link" side="right" reflect="1.0"  />
-  <xacro:reem_hand name="hand" parent="arm_left_tool_link"  side="left"  reflect="-1.0" />
-
+<!--
+  <xacro:ft_sensor name="wrist" parent="arm_right_tool_link" side="right" reflect="1.0"  />
+  <xacro:ft_sensor name="wrist" parent="arm_left_tool_link"  side="left"  reflect="-1.0" />
+-->
+<!--
+  <xacro:reem_hand name="hand" parent="wrist_right_ft_tool_link" side="right" reflect="1.0"  />
+  <xacro:reem_hand name="hand" parent="wrist_left_ft_tool_link"  side="left"  reflect="-1.0" />
+-->
+<!--
+  <xacro:hey5_hand parent="wrist_right_ft_tool_link" name="hand_right" reflect="1" >
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:hey5_hand>
+  <xacro:hey5_hand parent="wrist_left_ft_tool_link" name="hand_left" reflect="-1" >
+    <origin xyz="0 0 0" rpy="${180 * deg_to_rad} 0 0" />
+  </xacro:hey5_hand>
+-->
   <!-- stereo camera -->
   <!-- IMPORTANT: focal_length = image_width/(2tan(hfov/2)) --> 
   <xacro:reemc_stereo_camera parent="head_2_link" name="stereo" focal_length="461.943804" hfov="${71.0*deg_to_rad}" image_format="B8G8R8" image_width="659" image_height="493">
