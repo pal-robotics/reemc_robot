@@ -1,0 +1,67 @@
+torso_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - torso_1_motor
+    - torso_2_motor
+
+head_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - head_1_motor
+    - head_2_motor
+
+left_arm_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - arm_left_1_motor
+    - arm_left_2_motor
+    - arm_left_3_motor
+    - arm_left_4_motor
+    - arm_left_5_motor
+    - arm_left_6_motor
+    - arm_left_7_motor
+
+right_arm_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - arm_right_1_motor
+    - arm_right_2_motor
+    - arm_right_3_motor
+    - arm_right_4_motor
+    - arm_right_5_motor
+    - arm_right_6_motor
+    - arm_right_7_motor
+
+left_hand_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - hand_left_thumb_motor
+    - hand_left_index_motor
+    - hand_left_mrl_motor
+
+right_hand_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - hand_right_thumb_motor
+    - hand_right_index_motor
+    - hand_right_mrl_motor
+
+left_leg_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - leg_left_1_motor
+    - leg_left_2_motor
+    - leg_left_3_motor
+    - leg_left_4_motor
+    - leg_left_5_motor
+    - leg_left_6_motor
+
+right_leg_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - leg_right_1_motor
+    - leg_right_2_motor
+    - leg_right_3_motor
+    - leg_right_4_motor
+    - leg_right_5_motor
+    - leg_right_6_motor
