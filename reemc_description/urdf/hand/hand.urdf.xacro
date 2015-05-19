@@ -164,7 +164,6 @@
     <joint name="${name}_${side}_palm_joint" type="fixed">
       <parent link="${parent}" />
       <child link="${name}_${side}_palm_link" />
-<!--      <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad} 0" /> -->
       <origin xyz="0 0 0" rpy="0 0 0" />
     </joint>
 
