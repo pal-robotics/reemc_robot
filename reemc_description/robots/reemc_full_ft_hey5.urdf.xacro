@@ -43,8 +43,7 @@
   <xacro:include filename="$(find reemc_description)/urdf/head/head.urdf.xacro" />
   <!-- Arm -->
   <xacro:include filename="$(find reemc_description)/urdf/arm/arm.urdf.xacro" />
-  <!-- Hand -->
-<!--  <xacro:include filename="$(find reemc_description)/urdf/hand/hand.urdf.xacro" /> -->
+  <!-- Hey5 Hand -->
   <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
 
   <!-- Sensors -->
@@ -71,10 +70,7 @@
   <xacro:reem_arm name="arm" parent="torso_2_link" side="left"  reflect="-1.0" />
   <xacro:ft_sensor name="wrist" parent="arm_right_tool_link" side="right" reflect="1.0"  />
   <xacro:ft_sensor name="wrist" parent="arm_left_tool_link"  side="left"  reflect="-1.0" />
-<!--
-  <xacro:reem_hand name="hand" parent="wrist_right_ft_tool_link" side="right" reflect="1.0"  />
-  <xacro:reem_hand name="hand" parent="wrist_left_ft_tool_link"  side="left"  reflect="-1.0" />
--->
+
   <xacro:hey5_hand parent="wrist_right_ft_tool_link" name="hand_right" reflect="1" >
     <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:hey5_hand>
