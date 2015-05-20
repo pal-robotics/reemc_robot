@@ -2,6 +2,9 @@
   <!-- Load default controllers -->
   <include file="$(find reemc_controller_configuration)/launch/bringup_controllers.launch" />
 
+  <!-- ros control monitor -->
+  <node pkg="ros_control_monitor" type="ros_control_monitor_node" name="ros_control_monitor_node"/>
+
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="50.0" />
