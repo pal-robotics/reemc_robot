@@ -1,4 +1,6 @@
 <launch>
+  <arg name="robot" default="full"/>
+
   <!-- Walking controller parameters -->
   <include file="$(find reemc_controller_configuration)/launch/load_walking_params.launch" />
 
@@ -10,8 +12,12 @@
   <include file="$(find reemc_controller_configuration)/launch/current_limit_controllers.launch" />
 
   <!-- Robot model -->
-  <include file="$(find reemc_description)/robots/upload_reemc.launch" />
+  <include file="$(find reemc_description)/robots/upload_reemc.launch" >
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Bring up robot -->
-  <include file="$(find reemc_bringup)/launch/reemc_bringup.launch"/>
+  <include file="$(find reemc_bringup)/launch/reemc_bringup.launch">
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 </launch>
