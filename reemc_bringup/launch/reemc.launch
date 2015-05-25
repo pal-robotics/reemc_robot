@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="full_ft_hey5"/>
+  <arg name="robot" default="full"/>
 
   <!-- Walking controller parameters -->
   <include file="$(find reemc_controller_configuration)/launch/load_walking_params.launch" />
