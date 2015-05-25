@@ -1,0 +1,18 @@
+<launch>
+  <rosparam command="load" file="$(find reemc_controller_configuration)/config/hey5_controllers.yaml" />
+
+  <!-- Controllers that come up started -->
+  <node name="hand_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120
+              right_hand_controller
+              left_hand_controller" />
+
+  <!-- Simple grasping action -->
+  <node name="right_hand_grasping_action" pkg="simple_grasping_action" type="simple_grasping_action" output="screen">
+    <param name="target_controller" value="right_hand_controller" />
+  </node>
+  <node name="left_hand_grasping_action" pkg="simple_grasping_action" type="simple_grasping_action" output="screen">
+    <param name="target_controller" value="left_hand_controller" />
+  </node>
+</launch>
