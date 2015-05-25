@@ -1,4 +1,6 @@
 <launch>
+  <arg name="robot" default="full_ft_hey5"/>
+
   <!-- Load default controllers -->
   <include file="$(find reemc_controller_configuration)/launch/bringup_controllers.launch" />
 
@@ -24,7 +26,9 @@
   <include file="$(find reemc_moveit_config)/launch/move_group.launch"/>
 
   <!-- Pre-recorded motions executor -->
-  <include file="$(find reemc_bringup)/launch/play_motion.launch" />
+  <include file="$(find reemc_bringup)/launch/play_motion.launch" >
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Sitting application requirements -->
   <include file="$(find reemc_bringup)/launch/chair_sit.launch" />

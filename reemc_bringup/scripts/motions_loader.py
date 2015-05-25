@@ -30,6 +30,7 @@ public ones
 from rospkg import RosPack, ResourceNotFound
 from rosparam import upload_params
 from yaml import load
+import sys
 
 PRIVATE_PKG_NAME = 'reemc_motions_proprietary'
 PUBLIC_PKG_NAME = 'reemc_bringup'
@@ -49,12 +50,28 @@ def load_params_from_yaml(complete_file_path):
     upload_params('/', yamlfile )
 
 if __name__ == '__main__':
+    # We take 'full' as the original robot model
+    robot_name = 'full'
+    # If the robot arg was set, we get the motions file related to that model
+    for arg in sys.argv[1:]:
+        if 'robot=' in arg:
+            robot_name = arg.replace('robot=', '')
+    if robot_name != 'full':
+        PRIVATE_CONFIG_YAML = 'reemc_' + robot_name + '_motions.yaml'
+        PUBLIC_CONFIG_YAML = 'reemc_' + robot_name + '_motions.yaml'
+
     rp = RosPack()
     print "Loading public motions from: " + PUBLIC_PKG_NAME
     pub_pkg_path = rp.get_path(PUBLIC_PKG_NAME)
     pub_config_yaml = PUBLIC_CONFIG_YAML
     pub_full_path = pub_pkg_path + '/config/' + pub_config_yaml
-    load_params_from_yaml(pub_full_path)
+    try:
+        load_params_from_yaml(pub_full_path)
+    except IOError:
+        # We should load at least some movements, so we hardcode here the really default file
+        print str(pub_full_path) + " not found! Falling back to " + pub_pkg_path + '/config/reemc_motions.yaml'
+        load_params_from_yaml(pub_pkg_path + '/config/reemc_motions.yaml')
+
     print "Trying to find private package: " + PRIVATE_PKG_NAME
     try:
         pkg_path = rp.get_path(PRIVATE_PKG_NAME)
@@ -64,6 +81,8 @@ if __name__ == '__main__':
         load_params_from_yaml(full_path)
     except ResourceNotFound:
         print "Not found, only using public motions."
+    except IOError:
+        print "Package found but " + config_yaml + " not found, only using public motions."
 
     print "Finished."
     
