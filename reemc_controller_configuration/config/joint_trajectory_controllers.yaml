@@ -93,18 +93,18 @@ right_arm_controller:
 right_hand_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
-    - hand_right_thumb_joint
     - hand_right_index_joint
-    - hand_right_mrl_joint
+    - hand_right_middle_joint
+    - hand_right_thumb_joint
 
   constraints:
     goal_time: *goal_time_constraint
-    stopped_velocity_tolerance: 0.75
-    hand_right_thumb_joint:
-      goal: &hand_goal_pos_constraint 0.3
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     hand_right_index_joint:
-      goal: 0.6
-    hand_right_mrl_joint:
+      goal: *goal_pos_constraint
+    hand_right_middle_joint:
+      goal: *goal_pos_constraint
+    hand_right_thumb:
       goal: *goal_pos_constraint
 
   stop_trajectory_duration: 0.0
@@ -112,19 +112,19 @@ right_hand_controller:
 left_hand_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
-    - hand_left_thumb_joint
     - hand_left_index_joint
-    - hand_left_mrl_joint
+    - hand_left_middle_joint
+    - hand_left_thumb_joint
 
   constraints:
     goal_time: *goal_time_constraint
-    stopped_velocity_tolerance: 0.75
-    hand_left_thumb_joint:
-      goal: *hand_goal_pos_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     hand_left_index_joint:
-      goal: 0.6
-    hand_left_mrl_joint:
-      goal: *hand_goal_pos_constraint
+      goal: *goal_pos_constraint
+    hand_left_middle_joint:
+      goal: *goal_pos_constraint
+    hand_left_thumb:
+      goal: *goal_pos_constraint
 
   stop_trajectory_duration: 0.0
 
