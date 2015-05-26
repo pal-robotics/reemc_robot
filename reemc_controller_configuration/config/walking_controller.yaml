@@ -31,6 +31,6 @@ walking_controller:
     - arm_right_7_joint
     - head_1_joint
     - head_2_joint
-  left_ft_sensor: left_ft
-  right_ft_sensor: right_ft
+  left_ft_sensor: left_ankle_ft
+  right_ft_sensor: right_ankle_ft
   base_imu_sensor: base_imu

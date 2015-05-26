@@ -23,7 +23,9 @@
   <include file="$(find reemc_bringup)/launch/joystick_teleop.launch" />
 
   <!-- Motion planning -->
-  <include file="$(find reemc_moveit_config)/launch/move_group.launch"/>
+  <include file="$(find reemc_moveit_config)/launch/move_group.launch">
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Pre-recorded motions executor -->
   <include file="$(find reemc_bringup)/launch/play_motion.launch" >
