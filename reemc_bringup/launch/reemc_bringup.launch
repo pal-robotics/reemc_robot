@@ -1,6 +1,11 @@
 <launch>
+  <arg name="robot" default="full"/>
+
   <!-- Load default controllers -->
   <include file="$(find reemc_controller_configuration)/launch/bringup_controllers.launch" />
+
+  <!-- ros control monitor -->
+  <node pkg="ros_control_monitor" type="ros_control_monitor_node" name="ros_control_monitor_node"/>
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
@@ -18,10 +23,14 @@
   <include file="$(find reemc_bringup)/launch/joystick_teleop.launch" />
 
   <!-- Motion planning -->
-  <include file="$(find reemc_moveit_config)/launch/move_group.launch"/>
+  <include file="$(find reemc_moveit_config)/launch/move_group.launch">
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Pre-recorded motions executor -->
-  <include file="$(find reemc_bringup)/launch/play_motion.launch" />
+  <include file="$(find reemc_bringup)/launch/play_motion.launch" >
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Sitting application requirements -->
   <include file="$(find reemc_bringup)/launch/chair_sit.launch" />
