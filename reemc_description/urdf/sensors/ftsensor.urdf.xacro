@@ -11,10 +11,10 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
- <xacro:macro name="ft_sensor" params="name parent side reflect">
- <!--************************-->
- <!--        ft sensor        -->
- <!--************************-->
+  <xacro:macro name="ft_sensor" params="name parent side reflect">
+    <!--************************-->
+    <!--        ft sensor       -->
+    <!--************************-->
     <link name="${name}_${side}_ft_link">
       <inertial>
         <mass value="0.1" />
@@ -42,7 +42,7 @@
     </joint>
 
     <!--***********************-->
-    <!--       FT TOOL           -->
+    <!--       FT TOOL         -->
     <!--***********************-->
     <link name="${name}_${side}_ft_tool_link">
       <inertial>
