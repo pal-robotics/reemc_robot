@@ -6,7 +6,7 @@ play_motion:
       joints: [arm_right_3_joint, arm_right_4_joint, arm_right_1_joint, arm_left_4_joint,
         arm_left_1_joint, arm_left_2_joint, arm_right_2_joint, arm_left_3_joint]
       points:
-      - positions: [-1.0, 1.65, 1.2, 1.65, 1.2, 0.3, 0.3, -1.0]
+      - positions: [-0.95, 1.65, 1.2, 1.65, 1.2, 0.4, 0.4, -0.95]
         time_from_start: 0.0
     hands_up:
       joints: [torso_2_joint, arm_right_6_joint, arm_right_5_joint, arm_left_5_joint,
@@ -22,11 +22,11 @@ play_motion:
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
         arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
         arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
-        hand_right_thumb_joint, hand_right_index_joint, hand_right_mrl, hand_left_thumb_joint,
+        hand_right_thumb_joint, hand_right_index_joint, hand_right_mrl_joint, hand_left_thumb_joint,
         hand_left_index_joint, hand_left_mrl_joint]
       points:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1,
-          0.0, 0.0, 0.0, 0.0, -2.6, -2.5, -3.0, -2.6, -2.5, -3.0]
+          0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
       meta:
         name: Home
