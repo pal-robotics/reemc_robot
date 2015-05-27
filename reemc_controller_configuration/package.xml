@@ -19,5 +19,6 @@
   <run_depend>walking_controller</run_depend>
   <run_depend>reemc_init_offset_controller</run_depend>
   <run_depend>head_action</run_depend>
+  <run_depend>simple_grasping_action</run_depend>
 
 </package>

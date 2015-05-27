@@ -1,12 +1,17 @@
 <launch>
   <arg name="robot" default="full"/>
 
+  <!-- Hardware configuration -->
+  <rosparam command="load" file="$(find reemc_bringup)/config/reemc_$(arg robot)_hardware.yaml" />
+
   <!-- Walking controller parameters -->
   <include file="$(find reemc_controller_configuration)/launch/load_walking_params.launch" />
 
   <!-- Joint trajectory controllers parameters -->
   <rosparam command="load"
     file="$(find reemc_controller_configuration)/config/joint_trajectory_controllers.yaml" />
+  <rosparam command="load"
+    file="$(find reemc_controller_configuration)/config/hand_$(arg robot)_controllers.yaml" />
 
   <!-- Load current limit controllers (not done in simulation) -->
   <include file="$(find reemc_controller_configuration)/launch/current_limit_controllers.launch" />
