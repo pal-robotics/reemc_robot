@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="full"/>
+  <arg name="robot" default="full_ft_hey5"/>
 
   <!-- Hardware configuration -->
   <rosparam command="load" file="$(find reemc_bringup)/config/reemc_$(arg robot)_hardware.yaml" />

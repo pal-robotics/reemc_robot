@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="full"/>
+  <arg name="robot" default="full_ft_hey5"/>
 
   <!-- Load default controllers -->
   <include file="$(find reemc_controller_configuration)/launch/bringup_controllers.launch" />
