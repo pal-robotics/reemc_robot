@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
+  <arg name="robot" default="full"/>
+
   <!-- execute upperbody  motions while walking -->
-  <rosparam file="$(find reemc_bringup)/config/walk_poses.yaml" command="load" />
+  <rosparam command="load" file="$(find reemc_bringup)/config/walk_poses_$(arg robot).yaml" />
   <node name="walk_pose" pkg="walking_utils" type="walk_pose" />
 </launch>
 

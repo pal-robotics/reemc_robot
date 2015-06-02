@@ -1,9 +1,0 @@
-# Controller to use to move arms while walking. They must expose a FollowJointTrajectory action interface
-walk_pose:
-  controllers:
-    - right_arm_controller
-    - left_arm_controller
-    - head_controller
-    - torso_controller
-    - right_hand_controller
-    - left_hand_controller
