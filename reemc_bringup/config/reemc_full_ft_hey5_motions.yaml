@@ -54,7 +54,7 @@ play_motion:
       meta:
         name: Interact
         usage: posture
-        description: Same posture as in Hands Down.
+        description: Arms hanging to the sides, with elbows slightly bent.
     small_squat:
       joints: [leg_left_4_joint, leg_right_3_joint, leg_right_5_joint, leg_left_5_joint,
         leg_right_4_joint, leg_left_3_joint]
