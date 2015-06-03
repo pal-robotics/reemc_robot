@@ -66,8 +66,8 @@
   <xacro:reemc_leg  name="leg" side="left" reflect="-1.0" parent="base_link"/>
   <xacro:reem_torso name="torso" parent="base_link"/>
   <xacro:reem_head  name="head"  parent="torso_2_link"/>
-  <xacro:reem_arm name="arm" parent="torso_2_link" side="right" reflect="1.0"  />
-  <xacro:reem_arm name="arm" parent="torso_2_link" side="left"  reflect="-1.0" />
+  <xacro:reem_arm name="arm" parent="torso_2_link" side="right" reflect="1.0" wrist_6_range="81"/>
+  <xacro:reem_arm name="arm" parent="torso_2_link" side="left"  reflect="-1.0" wrist_6_range="81"/>
   <xacro:ft_sensor name="wrist" parent="arm_right_tool_link" side="right" reflect="1.0"  />
   <xacro:ft_sensor name="wrist" parent="arm_left_tool_link"  side="left"  reflect="-1.0" />
 
