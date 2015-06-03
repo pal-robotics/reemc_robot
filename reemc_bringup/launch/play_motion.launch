@@ -6,7 +6,7 @@
   <!-- execute pre-recorded motions -->
   <node pkg="reemc_bringup" type="motions_loader.py" name="motions_loader" args="robot=$(arg robot)"/>
   <node pkg="play_motion" type="play_motion" name="play_motion">
-    <rosparam file="$(find reemc_bringup)/config/approach_planner.yaml" command="load" />
+    <rosparam file="$(find reemc_bringup)/config/approach_planner_$(arg robot).yaml" command="load" />
   </node>
   <node pkg="play_motion" type="is_already_there.py" name="is_already_there" />
 </launch>
