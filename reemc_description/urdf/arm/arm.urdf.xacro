@@ -31,7 +31,7 @@
 
   <!-- TODO: Update dynamic models -->
 
-  <xacro:macro name="reem_arm" params="name parent side reflect">
+  <xacro:macro name="reem_arm" params="name parent side reflect wrist_6_range">
 
     <!--************************-->
     <!--        SHOULDER        -->
@@ -225,7 +225,7 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-    <xacro:reem_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}"  />
+    <xacro:reem_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}" wrist_6_range="${wrist_6_range}" />
 
     <!--***********************-->
     <!--        TOOL           -->
