@@ -9,3 +9,9 @@ foreach(dir config launch)
     install(DIRECTORY ${dir}/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
+
+
+install(PROGRAMS 
+    scripts/load_walking_offsets.sh
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

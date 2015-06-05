@@ -2,7 +2,7 @@
 
   <!-- Walking controller configuration -->
   <rosparam command="load" file="$(find reemc_controller_configuration)/config/walking_params.yaml" ns="walking_controller" />
-  <rosparam command="load" file="$(find reemc_controller_configuration)/config/offsets.yaml"        ns="walking_controller/offsets" />
+  <node name="load_walking_offsets" pkg="reemc_controller_configuration" type="load_walking_offsets.sh" />
   <rosparam command="load" file="$(find reemc_controller_configuration)/config/walking_controller.yaml" />
 
 </launch>
