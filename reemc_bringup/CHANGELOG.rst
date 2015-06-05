@@ -2,6 +2,14 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix and update motions to take into account Hey5 hand
+* Make bringup fully aware of REEM-C variants
+* Add ros_control_monitor in bringup
+* Add current limit controllers to robot bringup
+* Contributors: Adolfo Rodriguez, Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Luca Marchionni, Sammy Pfeiffer
+
 0.9.5 (2015-04-24)
 ------------------
 

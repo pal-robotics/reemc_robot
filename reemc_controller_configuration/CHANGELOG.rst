@@ -2,6 +2,15 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Make bringup fully aware of REEM-C variants
+* Add hey5 launch files for reemc
+* Add configuration for hey5 in jtc
+* Add ft sensor to the wrist and Hey5 hand
+* Add current limit controllers to robot bringup
+* Contributors: Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Luca Marchionni
+
 0.9.5 (2015-04-24)
 ------------------
 * Added missing dependencty imu controller and force torque controller
