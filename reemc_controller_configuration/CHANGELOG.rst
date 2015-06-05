@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.6 (2015-06-05)
+------------------
 * Make bringup fully aware of REEM-C variants
 * Add hey5 launch files for reemc
 * Add configuration for hey5 in jtc

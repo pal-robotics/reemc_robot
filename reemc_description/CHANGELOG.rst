@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.6 (2015-06-05)
+------------------
 * Set default robot to reemc_full_ft_hey5
 * Add robot urdf file for tf and hey5. Modified ftsensor urdf
 * Add ft sensor to the wrist and Hey5 hand

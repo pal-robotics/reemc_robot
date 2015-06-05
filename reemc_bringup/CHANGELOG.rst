@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.6 (2015-06-05)
+------------------
 * Fix and update motions to take into account Hey5 hand
 * Make bringup fully aware of REEM-C variants
 * Add ros_control_monitor in bringup
