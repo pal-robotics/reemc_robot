@@ -26,3 +26,6 @@ imu:
     frame: base_link
     raw_data:
       orientation_port: orientation_base
+
+ros_control_component:
+  ignore_read_errors: true
