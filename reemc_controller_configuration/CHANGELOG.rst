@@ -2,6 +2,11 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix ft sensor name for init_offset controller
+* Contributors: Luca Marchionni
+
 0.9.6 (2015-06-05)
 ------------------
 * Make bringup fully aware of REEM-C variants

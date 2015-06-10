@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add configuration for ignoring read errors
+* Contributors: Adolfo Rodriguez Tsouroukdissian
+
 0.9.6 (2015-06-05)
 ------------------
 * Fix and update motions to take into account Hey5 hand

@@ -2,6 +2,9 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.6 (2015-06-05)
 ------------------
 * Set default robot to reemc_full_ft_hey5
