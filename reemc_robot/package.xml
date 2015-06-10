@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>reemc_robot</name>
-  <version>0.9.6</version>
+  <version>0.9.7</version>
   <description>Description and launch files for the REEM-C robot</description>
   <maintainer email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</maintainer>
   <maintainer email="paul.mathieu@pal-robotics.com">Paul Mathieu</maintainer>
