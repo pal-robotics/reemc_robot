@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.8 (2015-06-14)
+------------------
 * Increase tolerance for hey5 controllers
 * Contributors: Luca Marchionni
 
