@@ -2,6 +2,11 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Increase tolerance for hey5 controllers
+* Contributors: Luca Marchionni
+
 0.9.7 (2015-06-10)
 ------------------
 * Fix ft sensor name for init_offset controller

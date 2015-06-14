@@ -2,6 +2,9 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.7 (2015-06-10)
 ------------------
 * Add configuration for ignoring read errors
