@@ -9,9 +9,9 @@ right_hand_controller:
     goal_time: &goal_time_constraint 0.6
     stopped_velocity_tolerance: &stopped_velocity_constraint 0.75
     hand_right_thumb_joint:
-      goal: &hand_goal_pos_constraint 0.3
+      goal: &hand_goal_pos_constraint 5.0
     hand_right_index_joint:
-      goal: &index_goal_pos_constraint 0.6
+      goal: &index_goal_pos_constraint 5.0
     hand_right_mrl_joint:
       goal: *hand_goal_pos_constraint
 
