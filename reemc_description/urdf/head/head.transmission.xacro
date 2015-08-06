@@ -10,13 +10,63 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="head_transmission" params="name reduction">
-    <transmission name="${name}_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="${name}_motor" >
-        <mechanicalReduction>${reduction}</mechanicalReduction>
+  <xacro:macro name="head_transmission" params="name">
+    <transmission name="${name}">
+      <type>pal_transmissions/HeadTransmission</type>
+      <actuator name="head_1_motor">
+        <role>independent</role>
+        <mechanicalReduction>1.0</mechanicalReduction>
       </actuator>
-      <joint name="${name}_joint" >
+      <actuator name="head_2_motor">
+        <role>dependent</role>
+        <mechanicalReduction>1.0</mechanicalReduction>
+      </actuator>
+      <joint name="head_1_joint">
+        <role>independent</role>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <joint name="head_2_joint">
+        <role>dependent</role>
+        <limits>
+          <key> ${-50.0 * deg_to_rad} </key>
+          <max> ${ 14.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${-40.0 * deg_to_rad} </key>
+          <max> ${ 18.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${-30.0 * deg_to_rad} </key>
+          <max> ${ 27.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${-20.0 * deg_to_rad} </key>
+          <max> ${ 39.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${-10.0 * deg_to_rad} </key>
+          <max> ${ 45.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${10.0 * deg_to_rad} </key>
+          <max> ${45.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${20.0 * deg_to_rad} </key>
+          <max> ${39.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${30.0 * deg_to_rad} </key>
+          <max> ${27.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${40.0 * deg_to_rad} </key>
+          <max> ${18.0 * deg_to_rad} </max>
+        </limits>
+        <limits>
+          <key> ${50.0 * deg_to_rad} </key>
+          <max> ${14.0 * deg_to_rad} </max>
+        </limits>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
     </transmission>

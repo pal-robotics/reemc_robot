@@ -70,11 +70,6 @@
     <gazebo reference="${name}_joint">
        <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
-
-
-    <!-- extensions -->
-    <xacro:head_transmission name="${name}" reduction="1" />
-
   </xacro:macro>
 
   <!--************************-->
@@ -116,7 +111,7 @@
       <safety_controller k_position="20"
                          k_velocity="20"
                          soft_lower_limit="${-15.0 * deg_to_rad + head_eps}"
-                         soft_upper_limit="${ 20.0 * deg_to_rad}" />
+                         soft_upper_limit="${ 45.0 * deg_to_rad}" />
     </joint>
 
     <gazebo reference="${name}_link">
@@ -133,14 +128,12 @@
     <xacro:range_reem name="head_sonar_03" parent="${name}" ros_topic="sonar_torso" update_rate="5" maxRange="0.6" minRange="0.0" fov="0.3491" radiation="ultrasound">
       <origin xyz="0.11 -0.195 0.0" rpy="1.57 0.0 0.0" />
     </xacro:range_reem>
-
-    <!-- extensions -->
-    <xacro:head_transmission name="${name}" reduction="1" />
   </xacro:macro>
 
   <xacro:macro name="reem_head" params="name parent">
     <xacro:reem_head_1 name="${name}_1" parent="${parent}" />
     <xacro:reem_head_2 name="${name}_2" parent="${name}_1_link"/>
+    <xacro:head_transmission name="${name}"/>
   </xacro:macro>
 
 </robot>

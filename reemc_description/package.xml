@@ -13,5 +13,5 @@
 
   <run_depend>xacro</run_depend>
   <run_depend>hey5_description</run_depend>
-
+  <run_depend>pal_transmissions</run_depend>
 </package>
