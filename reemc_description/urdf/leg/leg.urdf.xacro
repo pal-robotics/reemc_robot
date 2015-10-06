@@ -190,11 +190,11 @@
       <parent link="leg_${side}_4_link"/>
       <child link="leg_${side}_5_link"/>
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
-      <limit lower="${-100 * deg_to_rad}" upper="${ 45.0 * deg_to_rad}" effort="${leg_5_joint_effort}" velocity="${leg_5_joint_max_vel}" />
+      <limit lower="${-75 * deg_to_rad}" upper="${ 45.0 * deg_to_rad}" effort="${leg_5_joint_effort}" velocity="${leg_5_joint_max_vel}" />
 
       <safety_controller k_position="100"
                          k_velocity="100"
-                         soft_lower_limit="${-100.0 * deg_to_rad + leg_eps}"
+                         soft_lower_limit="${ -75.0 * deg_to_rad + leg_eps}"
                          soft_upper_limit="${  45.0 * deg_to_rad - leg_eps}" />
     </joint>
 
