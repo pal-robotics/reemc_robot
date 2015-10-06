@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.9 (2015-10-06)
+------------------
 * Changed min joint ankle y limit to -75
 * Contributors: Luca Marchionni
 

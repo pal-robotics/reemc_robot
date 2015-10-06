@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>reemc_bringup</name>
-  <version>0.9.8</version>
+  <version>0.9.9</version>
   <description>Launch files and scripts needed to bring up the ROS nodes of a REEM-C robot.</description>
   <maintainer email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</maintainer>
   <maintainer email="luca.marchionni@pal-robotics.com">Luca Marchionni</maintainer>
