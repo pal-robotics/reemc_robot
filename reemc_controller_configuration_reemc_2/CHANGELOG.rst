@@ -2,6 +2,9 @@
 Changelog for package reemc_controller_configuration_reemc_2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.8 (2015-06-14)
 ------------------
 
