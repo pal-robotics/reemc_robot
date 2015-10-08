@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.10 (2015-10-08)
+-------------------
 * Use custom head transmission.
   Tilt joint position limits depend on actual pan joint position.
   Refs #9907.
