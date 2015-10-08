@@ -2,6 +2,14 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use custom head transmission.
+  Tilt joint position limits depend on actual pan joint position.
+  Refs #9907.
+* Changed min joint ankle y limit to -75
+* Contributors: Adolfo Rodriguez Tsouroukdissian, Luca Marchionni, Víctor López
+
 0.9.9 (2015-10-06)
 ------------------
 * Changed min joint ankle y limit to -75
