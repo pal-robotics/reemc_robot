@@ -5,7 +5,7 @@
             <author>VCGLab</author>
             <authoring_tool>VCGLib | MeshLab</authoring_tool>
         </contributor>
-        <up_axis>Y_UP</up_axis>
+        <up_axis>Z_UP</up_axis>
         <created>Wed Oct 30 10:45:00 2013</created>
         <modified>Wed Oct 30 10:45:00 2013</modified>
     </asset>
