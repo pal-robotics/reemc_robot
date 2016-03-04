@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>reemc_controller_configuration_reemc_2</name>
-  <version>0.9.10</version>
+  <version>0.9.11</version>
   <description>REEMC-2 specific controller configuration</description>
 
   <maintainer email="luca.marchionni@pal-robotics.com">Luca Marchionni</maintainer>
