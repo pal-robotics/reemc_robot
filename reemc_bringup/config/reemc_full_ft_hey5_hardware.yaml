@@ -11,22 +11,22 @@ e_stop:
 
 force_torque:
   left_ankle_ft:
-    frame: leg_left_6_link
+    frame: left_sole_link
     raw_data:
       force_port: force_ankle_left
       torque_port: torque_ankle_left
   right_ankle_ft:
-    frame: leg_right_6_link
+    frame: right_sole_link
     raw_data:
       force_port: force_ankle_right
       torque_port: torque_ankle_right
   left_wrist_ft:
-    frame: arm_left_7_link
+    frame: wrist_left_ft_link
     raw_data:
       force_port: force_wrist_left
       torque_port: torque_wrist_left
   right_wrist_ft:
-    frame: arm_right_7_link
+    frame: wrist_right_ft_link
     raw_data:
       force_port: force_wrist_right
       torque_port: torque_wrist_right
