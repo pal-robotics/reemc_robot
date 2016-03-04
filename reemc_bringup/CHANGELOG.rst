@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix tf frames for ft sensors in ankles and wrists
+* Contributors: Luca Marchionni
+
 0.9.10 (2015-10-08)
 -------------------
 
