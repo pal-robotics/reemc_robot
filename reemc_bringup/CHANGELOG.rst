@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix real sensor measures for matching sensor frame axes
+* Contributors: Luca Marchionni
+
 0.9.11 (2016-03-04)
 -------------------
 * Fix tf frames for ft sensors in ankles and wrists
