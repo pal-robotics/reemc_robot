@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.0 (2016-04-04)
+-------------------
 * Fix real sensor measures for matching sensor frame axes
 * Contributors: Luca Marchionni
 
