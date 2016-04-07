@@ -2,6 +2,11 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added support for joint mode in urdf transmissions, pal hardware config file and added configuration files for REEM-C4
+* Contributors: Hilario Tome
+
 0.10.0 (2016-04-04)
 -------------------
 
