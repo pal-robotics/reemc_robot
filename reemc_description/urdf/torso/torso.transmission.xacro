@@ -27,12 +27,14 @@
         <offset>0.0</offset>
         <mechanicalReduction>${jnt_reduction1}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <joint name="${name}_${number2}_joint">
         <role>joint2</role>
         <offset>0.0</offset>
         <mechanicalReduction>${jnt_reduction2}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
