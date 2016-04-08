@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.2 (2016-04-08)
+-------------------
 * Added linear acceleration and angular velocity ports
 * Contributors: Hilario Tome
 
