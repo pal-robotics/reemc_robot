@@ -46,6 +46,8 @@ imu:
     frame: base_link
     raw_data:
       orientation_port: orientation_base
+      linear_acceleration_port: linear_acceleration_base
+      angular_velocity_port: angular_velocity_base
 
 ros_control_component:
   ignore_read_errors: true
