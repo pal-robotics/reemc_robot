@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.3 (2016-04-14)
+-------------------
 * Changed robot hardware sim type to pal hardware gazebo
 * Contributors: Hilario Tome
 
