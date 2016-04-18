@@ -2,6 +2,11 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Point to correct config file
+* Contributors: Sam Pfeiffer
+
 0.10.3 (2016-04-14)
 -------------------
 
