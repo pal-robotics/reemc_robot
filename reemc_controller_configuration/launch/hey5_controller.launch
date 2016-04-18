@@ -1,5 +1,5 @@
 <launch>
-  <rosparam command="load" file="$(find reemc_controller_configuration)/config/hey5_controllers.yaml" />
+  <rosparam command="load" file="$(find reemc_controller_configuration)/config/hand_full_ft_hey5_controllers.yaml" />
 
   <!-- Controllers that come up started -->
   <node name="hand_controllers_spawner"
