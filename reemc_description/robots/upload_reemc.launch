@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="full_ft_hey5"/>
+  <arg name="robot" default="full"/>
 
   <!-- Robot description -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find reemc_description)/robots/reemc_$(arg robot).urdf.xacro'"/>

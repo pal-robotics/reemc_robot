@@ -214,7 +214,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0.1 ${-reflect*0.01} 0.025 "/>
         <geometry>
-          <box size="0.02 0.14 0.210"/>
+          <box size="0.03 0.14 0.210"/>
         </geometry>
       </collision>
     </link>
