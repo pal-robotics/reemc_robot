@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration_reemc_1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.6 (2016-10-06)
+-------------------
 * Added specific walking params reemc4
 * Contributors: Hilario Tome
 
