@@ -22,3 +22,7 @@ com_stabilizer:
    ss_x_p: 1.0
    ss_y_p: 1.0
 
+hip_spacing: 0.0725
+femur_lenght: 0.3
+tibia_lenght: 0.3
+foot_height: 0.110
