@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.5 (2016-10-06)
+-------------------
 * 0.10.4
 * Updated changelog
 * Added reemc specifics to walking params, and reverted torso to revolute joint
