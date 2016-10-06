@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.4 (2016-10-06)
+-------------------
 * Added reemc specifics to walking params, and reverted torso to revolute joint
 * Revert "0.10.4"
   This reverts commit cede99f356296d77bdbf004c5edf1231df637d62.
