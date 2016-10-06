@@ -4,6 +4,9 @@ Changelog for package reemc_bringup
 
 Forthcoming
 -----------
+* Revert "0.10.4"
+  This reverts commit cede99f356296d77bdbf004c5edf1231df637d62.
+* Contributors: Hilario Tome
 
 0.10.3 (2016-04-14)
 -------------------

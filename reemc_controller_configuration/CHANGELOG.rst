@@ -4,6 +4,11 @@ Changelog for package reemc_controller_configuration
 
 Forthcoming
 -----------
+* Added reemc specifics to walking params, and reverted torso to revolute joint
+* Revert "0.10.4"
+  This reverts commit cede99f356296d77bdbf004c5edf1231df637d62.
+* Contributors: Hilario Tome
+
 * Point to correct config file
 * Contributors: Sam Pfeiffer
 
