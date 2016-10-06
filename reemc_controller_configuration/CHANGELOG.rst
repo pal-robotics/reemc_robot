@@ -2,6 +2,11 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fixed typo
+* Contributors: Hilario Tome
+
 0.10.6 (2016-10-06)
 -------------------
 
