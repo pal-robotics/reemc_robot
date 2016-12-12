@@ -28,3 +28,5 @@ hip_spacing_z: 0.0
 femur_length: 0.3
 tibia_length: 0.3
 foot_height: 0.110
+
+read_absolute_encoders: False
