@@ -2,6 +2,11 @@
 Changelog for package reemc_controller_configuration_reemc_3
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated reemc specific params
+* Contributors: Hilario Tome
+
 0.10.8 (2016-12-12)
 -------------------
 
