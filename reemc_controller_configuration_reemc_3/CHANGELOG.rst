@@ -2,6 +2,9 @@
 Changelog for package reemc_controller_configuration_reemc_3
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.10.7 (2016-10-06)
 -------------------
 
