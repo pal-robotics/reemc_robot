@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.10.10 (2016-12-12)
+--------------------
+* Fixed force torque sensor sign in hardware config
+* Contributors: Hilario Tome
+
 0.10.9 (2016-12-12)
 -------------------
 
