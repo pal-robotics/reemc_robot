@@ -10,6 +10,15 @@ Changelog for package reemc_controller_configuration_reemc_2
 0.10.8 (2016-12-12)
 -------------------
 
+Forthcoming
+-----------
+* 0.10.9
+* Updated changelog
+* Updated reemc specific params
+* 0.10.8
+* Updated changelog
+* Contributors: Hilario Tome
+
 0.10.7 (2016-10-06)
 -------------------
 

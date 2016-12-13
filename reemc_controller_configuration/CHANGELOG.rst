@@ -12,6 +12,17 @@ Changelog for package reemc_controller_configuration
 * Modified reemc controller params
 * Contributors: Hilario Tome
 
+Forthcoming
+-----------
+* 0.10.9
+* Updated changelog
+* 0.10.8
+* Updated changelog
+* Updated walking params
+* Fixed walking params error
+* Modified reemc controller params
+* Contributors: Hilario Tome
+
 0.10.7 (2016-10-06)
 -------------------
 * Fixed typo
