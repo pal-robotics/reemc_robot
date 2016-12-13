@@ -13,8 +13,8 @@ Changelog for package reemc_bringup
 0.10.8 (2016-12-12)
 -------------------
 
-Forthcoming
------------
+0.10.11 (2016-12-13)
+--------------------
 * Updated walk pose
 * 0.10.9
 * Updated changelog

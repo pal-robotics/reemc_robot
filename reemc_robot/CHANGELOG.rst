@@ -11,8 +11,8 @@ Changelog for package reemc_robot
 0.10.8 (2016-12-12)
 -------------------
 
-Forthcoming
------------
+0.10.11 (2016-12-13)
+--------------------
 * 0.10.9
 * Updated changelog
 * 0.10.8

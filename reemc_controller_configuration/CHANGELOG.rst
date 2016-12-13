@@ -15,8 +15,8 @@ Changelog for package reemc_controller_configuration
 * Modified reemc controller params
 * Contributors: Hilario Tome
 
-Forthcoming
------------
+0.10.11 (2016-12-13)
+--------------------
 * 0.10.9
 * Updated changelog
 * 0.10.8
