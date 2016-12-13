@@ -7,7 +7,7 @@ walk_pose:
     - torso_controller
     - right_hand_controller
     - left_hand_controller
-  joints:
+  joints_rest_pos:
     - arm_left_1_joint : -0.44
     - arm_left_2_joint : 0.26
     - arm_left_3_joint : 0.0
@@ -37,3 +37,11 @@ walk_pose:
     - hand_left_thumb_joint: 0.0
     - hand_left_index_joint: 0.0
     - hand_left_mrl_joint: 0.0
+    
+  joints_to_move:
+    - arm_left_1_joint: 1.0
+    - arm_left_4_joint: -1.0
+    - arm_right_1_joint: -1.0
+    - arm_right_4_joint: 1.0
+    - torso_1_joint: -0.5
+    - head_1_joint: 0.5
