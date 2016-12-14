@@ -4,7 +4,7 @@
   <arg name="robot" default="full"/>
 
   <!-- execute upperbody  motions while walking -->
-  <rosparam command="load" file="$(find reemc_bringup)/config/walk_poses_$(arg robot).yaml" />
+  <rosparam command="load" file="$(find reemc_controller_configuration)/config/walk_poses_$(arg robot).yaml" />
   <node name="walk_pose" pkg="walking_utils" type="walk_pose" />
 </launch>
 

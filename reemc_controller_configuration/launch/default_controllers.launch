@@ -39,4 +39,9 @@
     <param name="target_controller" value="right_hand_controller" />
   </node>
 
+  <!-- Arm motions executor while walking -->
+  <include file="$(find reemc_controller_configuration)/launch/walk_pose.launch" >
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
+
 </launch>

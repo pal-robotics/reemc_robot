@@ -4,10 +4,10 @@
   <version>0.10.11</version>
   <description>Launch files and scripts needed to configure
     the controllers of the REEM-C robot.</description>
-  <maintainer email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</maintainer>
-  <maintainer email="paul.mathieu@pal-robotics.com">Paul Mathieu</maintainer>
+  <maintainer email="luca.marchionni@pal-robotics.com">Luca Marchionni</maintainer>
+  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
   <license>Modified BSD</license>
-  <author email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</author>
+  <author email="luca.marchionni@pal-robotics.com">Luca Marchionni</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
@@ -20,5 +20,5 @@
   <run_depend>reemc_init_offset_controller</run_depend>
   <run_depend>head_action</run_depend>
   <run_depend>simple_grasping_action</run_depend>
-
+  <run_depend>walking_utils</run_depend>
 </package>
