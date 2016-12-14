@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.12 (2016-12-14)
+--------------------
 * Add walk_pose to default_controllers, instead of bringup
 * Contributors: luca
 
