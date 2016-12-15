@@ -41,7 +41,7 @@
 
   <!-- Arm motions executor while walking -->
   <include file="$(find reemc_controller_configuration)/launch/walk_pose.launch" >
-    <arg name="robot" value="$(arg robot)"/>
+    <arg name="robot" value="full_ft_hey5"/>
   </include>
 
 </launch>
