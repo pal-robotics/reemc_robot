@@ -2,6 +2,12 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* robot specification fixes
+* Fix walk_pose launch
+* Contributors: Hilario Tome, luca
+
 0.10.12 (2016-12-14)
 --------------------
 * Add walk_pose to default_controllers, instead of bringup

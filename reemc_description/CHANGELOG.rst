@@ -2,6 +2,11 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* robot specification fixes
+* Contributors: Hilario Tome
+
 0.10.12 (2016-12-14)
 --------------------
 
