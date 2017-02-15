@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.13 (2017-02-15)
+--------------------
 * robot specification fixes
 * Fix walk_pose launch
 * Contributors: Hilario Tome, luca
