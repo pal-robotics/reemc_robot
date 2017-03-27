@@ -2,6 +2,11 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* deleted broken link
+* Contributors: Hilario Tome
+
 0.10.14 (2017-03-27)
 --------------------
 * added config files for reemc no hands, and removed reemc three finger hand model
