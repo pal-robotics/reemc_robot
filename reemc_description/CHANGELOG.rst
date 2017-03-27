@@ -2,6 +2,11 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added config files for reemc no hands, and removed reemc three finger hand model
+* Contributors: Hilario Tome
+
 0.10.13 (2017-02-15)
 --------------------
 * robot specification fixes
