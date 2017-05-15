@@ -2,6 +2,9 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.10.15 (2017-03-27)
 --------------------
 * deleted broken link
