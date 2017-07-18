@@ -16,5 +16,7 @@ endforeach(dir)
 
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
-  add_rostest(test/test_reemc.test)
+  add_rostest(test/test_reemc_full_hand.test)
+  add_rostest(test/test_reemc_full_no_hand.test)
+  add_rostest(test/test_reemc_lower_body.test)
 endif()

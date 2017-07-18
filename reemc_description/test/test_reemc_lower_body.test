@@ -1,0 +1,7 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find reemc_description)/robots/reemc_lower_body.urdf.xacro'"/>
+
+  <include file="$(find urdf_test)/launch/test_urdf.launch">
+    <arg name="get_description" value="true"/>
+  </include>
+</launch>
