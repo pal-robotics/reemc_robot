@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add motions for the humanoids demo
+* Contributors: davidfernandez
+
 0.10.16 (2017-05-15)
 --------------------
 
