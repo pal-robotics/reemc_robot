@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.18 (2017-12-04)
+--------------------
 * Remove ignore_read_errors
 * Contributors: Victor Lopez
 
