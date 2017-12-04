@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove ignore_read_errors
+* Contributors: Victor Lopez
+
 0.10.17 (2017-11-11)
 --------------------
 * Add motions for the humanoids demo
