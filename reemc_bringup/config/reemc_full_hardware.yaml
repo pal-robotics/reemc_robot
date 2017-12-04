@@ -28,4 +28,4 @@ imu:
       orientation_port: orientation_base
 
 ros_control_component:
-  ignore_read_errors: true
+  ignore_read_errors: false

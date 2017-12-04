@@ -50,4 +50,4 @@ imu:
       angular_velocity_port: angular_velocity_base
 
 ros_control_component:
-  ignore_read_errors: true
+  ignore_read_errors: false
