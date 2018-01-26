@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2018-01-26)
+------------------
 * Remove offsets from previous reemc
 * Activate odom in walking params
 * modified params in init_offset_controller.yaml
