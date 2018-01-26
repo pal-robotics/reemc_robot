@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.19 (2018-01-26)
+--------------------
 * Rm motions from three finger hand
 * Contributors: Adrià Roig
 
