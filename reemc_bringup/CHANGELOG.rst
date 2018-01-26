@@ -2,6 +2,11 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Rm motions from three finger hand
+* Contributors: Adrià Roig
+
 0.10.18 (2017-12-04)
 --------------------
 * Remove ignore_read_errors
