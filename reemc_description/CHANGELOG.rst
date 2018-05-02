@@ -2,6 +2,13 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'test_urdf' of gitlab:robots/reemc_robot into erbium-devel
+* Add tests for additional URDF files
+* Test URDF file
+* Contributors: Hilario Tome, davidfernandez
+
 1.0.0 (2018-01-26)
 ------------------
 
