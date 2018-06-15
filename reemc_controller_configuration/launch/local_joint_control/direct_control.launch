@@ -3,129 +3,201 @@
 
   <arg name="local_joint_control_type" default=""/>
   <arg name="ns" default=""/>
+  <arg name="local_joint_control" default="direct_position_control"/>
+  <arg name="controller_pkg_name" default="reemc_controller_configuration"/>
 
-  <!-- Configure local joint control -->
+  <!-- Load controlled joint list configuration-->
+  <!-- right arm -->
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_right_1_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_right_2_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_right_3_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_right_4_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_right_5_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_right_6_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_right_7_joint"/>
+  </include> 
+
+  <!-- lef arm -->
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_left_1_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_left_2_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_left_3_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_left_4_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_left_5_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_left_6_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_left_7_joint"/>
+  </include> 
+
+  <!-- right leg -->
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_right_1_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_right_2_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_right_3_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_right_4_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_right_5_joint"/>
+  </include> 
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_right_6_joint"/>
+  </include> 
   
-  <!-- Left leg -->
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_left_1_joint.yaml" />
+  <!-- left leg -->
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_left_2_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_left_1_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_left_3_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_left_2_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_left_4_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_left_3_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_left_5_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_left_4_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_left_6_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_left_5_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_left_7_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="leg_left_6_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_right_1_joint.yaml" />
+  <!-- head -->
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_right_2_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="head_1_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_right_3_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="head_2_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_right_4_joint.yaml" />
+  <!-- torso -->
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_right_5_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="torso_1_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_right_6_joint.yaml" />
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_right_7_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_left_1_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_left_2_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_left_3_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_left_4_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_left_5_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_left_6_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_right_1_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_right_2_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_right_3_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_right_4_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_right_5_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_leg_right_6_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_head_1_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_head_2_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_torso_1_joint.yaml" />
-
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find reemc_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_torso_2_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="torso_2_joint"/>
+  </include> 
 
 
 </launch>
