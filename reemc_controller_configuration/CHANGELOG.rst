@@ -2,6 +2,14 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'local_control' into 'erbium-devel'
+  New API local control
+  See merge request robots/reemc_robot!17
+* New API local control
+* Contributors: Adria Roig, Hilario Tome
+
 1.0.1 (2018-05-02)
 ------------------
 * Merge branch 'local_control' into 'erbium-devel'

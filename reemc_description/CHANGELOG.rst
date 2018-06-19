@@ -2,6 +2,9 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.1 (2018-05-02)
 ------------------
 * Merge branch 'test_urdf' of gitlab:robots/reemc_robot into erbium-devel

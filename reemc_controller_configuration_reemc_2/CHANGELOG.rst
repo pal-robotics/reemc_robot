@@ -2,6 +2,9 @@
 Changelog for package reemc_controller_configuration_reemc_2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.1 (2018-05-02)
 ------------------
 
