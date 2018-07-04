@@ -2,6 +2,14 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'head_flag' into 'erbium-devel'
+  enable or not head control by arg
+  See merge request robots/reemc_robot!18
+* enable or not head control by arg
+* Contributors: Adrià Roig, Hilario Tome
+
 1.0.2 (2018-06-19)
 ------------------
 * Merge branch 'local_control' into 'erbium-devel'
