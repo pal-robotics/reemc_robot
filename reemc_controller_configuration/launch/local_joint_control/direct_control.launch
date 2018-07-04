@@ -5,6 +5,7 @@
   <arg name="ns" default=""/>
   <arg name="local_joint_control" default="direct_position_control"/>
   <arg name="controller_pkg_name" default="reemc_controller_configuration"/>
+  <arg name="head" default="true"/>
 
   <!-- Load controlled joint list configuration-->
   <!-- right arm -->
@@ -172,17 +173,21 @@
 
   <!-- head -->
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="head_1_joint"/>
-  </include> 
+  <group if="$(arg head)">
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="head_2_joint"/>
-  </include> 
+    <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+      <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+      <arg name="ns" value="$(arg ns)"/>
+      <arg name="joint_name" value="head_1_joint"/>
+    </include> 
+
+    <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+      <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+      <arg name="ns" value="$(arg ns)"/>
+      <arg name="joint_name" value="head_2_joint"/>
+    </include>
+
+  </group>
 
   <!-- torso -->
 
