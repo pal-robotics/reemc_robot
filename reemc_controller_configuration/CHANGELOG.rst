@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.4 (2018-12-12)
+------------------
 * Merge branch 'public_sim' into 'erbium-devel'
   Remove simple_grasping_action
   See merge request robots/reemc_robot!19
