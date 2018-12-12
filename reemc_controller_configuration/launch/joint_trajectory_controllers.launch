@@ -22,12 +22,4 @@
     </node>
   </group>
 
-  <!-- Simple grasping action -->
-  <node name="left_hand_grasping_action" pkg="simple_grasping_action" type="simple_grasping_action" output="screen">
-    <param name="target_controller" value="left_hand_controller" />
-  </node>
-
-  <node name="right_hand_grasping_action" pkg="simple_grasping_action" type="simple_grasping_action" output="screen">
-    <param name="target_controller" value="right_hand_controller" />
-  </node>
 </launch>
