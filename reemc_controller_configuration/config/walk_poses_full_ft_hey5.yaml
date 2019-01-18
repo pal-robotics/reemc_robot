@@ -1,47 +1,42 @@
-# Controller to use to move arms while walking. They must expose a FollowJointTrajectory action interface
 walk_pose:
-  controllers:
-    - right_arm_controller
+  controller_names:
     - left_arm_controller
-    - head_controller
+    - right_arm_controller
     - torso_controller
-    - right_hand_controller
     - left_hand_controller
+    - right_hand_controller
+    - head_controller
+
   joints_rest_pos:
-    - arm_left_1_joint : -0.44
-    - arm_left_2_joint : 0.26
-    - arm_left_3_joint : 0.0
-    - arm_left_4_joint : 0.88
-    - arm_left_5_joint : 0.0
-    - arm_left_6_joint : 0.0
-    - arm_left_7_joint : 0.0
-
-    - arm_right_1_joint: -0.44
-    - arm_right_2_joint: 0.26
-    - arm_right_3_joint: 0.0
-    - arm_right_4_joint: 0.88
-    - arm_right_5_joint: 0.0
-    - arm_right_6_joint: 0.0
-    - arm_right_7_joint: 0.0
-
-    - torso_1_joint: 0.0
-    - torso_2_joint: 0.0
-
-    - head_1_joint: 0.0
-    - head_2_joint: 0.0
-
-    - hand_right_thumb_joint: 0.0
-    - hand_right_index_joint: 0.0
-    - hand_right_mrl_joint: 0.0
-
-    - hand_left_thumb_joint: 0.0
-    - hand_left_index_joint: 0.0
-    - hand_left_mrl_joint: 0.0
+    arm_left_1_joint: -0.44
+    arm_left_2_joint: 0.26
+    arm_left_3_joint: 0.0
+    arm_left_4_joint: 0.88
+    arm_left_5_joint: 0.0
+    arm_left_6_joint: 0.0
+    arm_left_7_joint: 0.0
+    arm_right_1_joint: -0.44
+    arm_right_2_joint: 0.26
+    arm_right_3_joint: 0.0
+    arm_right_4_joint: 0.88
+    arm_right_5_joint: 0.0
+    arm_right_6_joint: 0.0
+    arm_right_7_joint: 0.0
+    torso_1_joint: 0.0
+    torso_2_joint: 0.0
+    head_1_joint: 0.0
+    head_2_joint: 0.0
+    hand_right_thumb_joint: 0.0
+    hand_right_index_joint: 0.0
+    hand_right_mrl_joint: 0.0
+    hand_left_thumb_joint: 0.0
+    hand_left_index_joint: 0.0
+    hand_left_mrl_joint: 0.0
     
   joints_to_move:
-    - arm_left_1_joint: 1.0
-    - arm_left_4_joint: -1.0
-    - arm_right_1_joint: -1.0
-    - arm_right_4_joint: 1.0
-    - torso_1_joint: -0.5
-    - head_1_joint: 0.5
+    arm_left_1_joint: 1.0
+    arm_left_4_joint: -1.0
+    arm_right_1_joint: -1.0
+    arm_right_4_joint: 1.0
+    torso_1_joint: -0.5
+    head_1_joint: 0.5
