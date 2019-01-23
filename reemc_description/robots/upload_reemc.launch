@@ -1,8 +1,9 @@
 <launch>
   <arg name="robot" default="full_ft_hey5"/>
+  <arg name="head_version" default="v1"/>
 
   <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find reemc_description)/robots/reemc_$(arg robot).urdf.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find reemc_description)/robots/reemc_$(arg robot).urdf.xacro' head_version:=$(arg head_version)"/>
 
   <!-- Joint limits -->
   <rosparam command="load" file="$(find reemc_description)/config/joint_limits.yaml"/>
