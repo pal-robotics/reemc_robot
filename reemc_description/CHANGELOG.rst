@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.5 (2019-03-07)
+------------------
 * Merge branch 'merge-from-github' into 'erbium-devel'
   Switch Y_UP to Z_UP for all up_axis field of the meshes.
   See merge request robots/reemc_robot!20

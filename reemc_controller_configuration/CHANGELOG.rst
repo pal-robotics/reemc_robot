@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.5 (2019-03-07)
+------------------
 * Merge branch 'walk_pose' into 'erbium-devel'
   Update walk pose params format
   See merge request robots/reemc_robot!21
