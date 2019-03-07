@@ -2,6 +2,18 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'merge-from-github' into 'erbium-devel'
+  Switch Y_UP to Z_UP for all up_axis field of the meshes.
+  See merge request robots/reemc_robot!20
+* Switch Y_UP to Z_UP for all up_axis field of the meshes.
+  Y_UP introduces a transform between the original geometry of the body.
+  Rviz is explicitly removing this transform, see
+  https://github.com/ros-visualization/rviz/blob/8a010bbda36d425129dc06887eddcab032459319/src/rviz/mesh_loader.cpp#L233
+  Signed-off-by: Hilario Tome <hilario.tome@pal-robotics.com>
+* Contributors: Olivier Stasse, Victor Lopez
+
 1.0.4 (2018-12-12)
 ------------------
 

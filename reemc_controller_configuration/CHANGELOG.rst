@@ -2,6 +2,14 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'walk_pose' into 'erbium-devel'
+  Update walk pose params format
+  See merge request robots/reemc_robot!21
+* Update walk pose params format
+* Contributors: Adrià Roig, Hilario Tome
+
 1.0.4 (2018-12-12)
 ------------------
 * Merge branch 'public_sim' into 'erbium-devel'
