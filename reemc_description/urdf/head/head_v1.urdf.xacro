@@ -27,11 +27,11 @@
   <xacro:macro name="reem_head_1" params="name parent">
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.01819	0.00248	-0.00517" rpy="0 0 0" />
-        <mass value="1.11967" />
+        <origin xyz="0.014823 -0.000253 -0.008383" rpy="0 0 0" />
+        <mass value="0.646763" />
         <!-- NOTE: Assuming cylinder with r=0.06, h=0.08 -->
 <!--         <inertia ixx="0.0014125"  ixy="0"  ixz="0" iyy="0.0014125" iyz="0" izz="0.0017738" /> -->
-        <inertia ixx="0.00111370229"  ixy="0.00003992198"  ixz="-0.00012464155" iyy="0.00111361487" iyz="0.00001943162" izz="0.00114794061" />
+        <inertia ixx="0.001175"  ixy="-0.000003"  ixz="0.000012" iyy="0.001273" iyz="-0.000008" izz="0.001132" />
       </inertial>
       <visual>
         <origin rpy="0 0 0" xyz="-0.03 0 0"/> <!--TODO: Remove offset when good meshes arrive-->
@@ -78,17 +78,17 @@
   <xacro:macro name="reem_head_2" params="name parent">
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.01183 -0.08098 0.00104" rpy="0 0 0" />
-        <mass value="1.63134" />
+        <origin xyz="-0.023981 -0.100591 0.000294" rpy="0 0 0" />
+        <mass value="0.920999" />
         <!-- NOTE: Assuming box with d=0.28433, w=0.20302, h=0.26741 -->
 <!--         <inertia ixx="0.011353"  ixy="0"  ixz="0" iyy="0.012294" iyz="0" izz="0.015345" /> -->
         <!--NOTE: Low (0.1 or lower) diagonal inertia values make Gazebo 1.0.2 simulation unstable when head sensors are added.-->
-        <inertia ixx="0.00640199093"  ixy="0.00012197067"  ixz="-0.00000897011" iyy="0.00676228591" iyz="-0.0000552329" izz="0.00614192438" />
+        <inertia ixx="0.005972"  ixy="-0.000046"  ixz="0.000006" iyy="0.006327" iyz="0.000030" izz="0.006213" />
       </inertial>
       <visual>
-        <origin rpy="0 0 0" xyz="-0.03 0 0"/> <!--TODO: Remove offset when good meshes arrive-->
+        <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://reemc_description/meshes/head/head_2.dae" />
+          <mesh filename="package://reemc_description/meshes/head/head_2_v1.stl" />
         </geometry>
         <material name="LightGrey" />
       </visual>
@@ -103,7 +103,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
         <child link="${name}_link"/>
-      <origin xyz="0.0445 0 0" rpy="${-90.0 * deg_to_rad} 0 0" />
+      <origin xyz="0.0445 0 0" rpy="${-90.0 * deg_to_rad} ${0.0 * deg_to_rad}  0" />
       <axis xyz="0 0 1" />
       <limit lower="${-15.0 * deg_to_rad}" upper="${45.0 * deg_to_rad}" effort="3.26" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>

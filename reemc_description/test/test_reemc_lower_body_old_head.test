@@ -1,6 +1,7 @@
 <launch>
   <include file="$(find reemc_description)/robots/upload_reemc.launch">
   	<arg name="robot" value="lower_body"/>
+  	<arg name="head_version" value="v0"/>
   </include>
 
   <include file="$(find urdf_test)/launch/test_urdf.launch">

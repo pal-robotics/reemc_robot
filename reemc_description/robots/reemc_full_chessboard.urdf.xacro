@@ -14,6 +14,13 @@
         xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
 
+  <xacro:arg name="head_version" default="v1"/>
+  <xacro:property name="camera" value="${'camera_color' if head_version == 'v1' else 'stereo'}"/>
+  <xacro:property name="head_version" value="$(arg head_version)" />
+  <xacro:if value="${head_version not in ['v0','v1']}">
+    <xacro:wrong_head_version/>
+  </xacro:if>
+
   <link name="base_link">
     <inertial>
       <mass value="12.3221"/>
@@ -40,7 +47,7 @@
   <!-- Torso -->
   <xacro:include filename="$(find reemc_description)/urdf/torso/torso.urdf.xacro" />
   <!-- Head -->
-  <xacro:include filename="$(find reemc_description)/urdf/head/head.urdf.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/head/head_${head_version}.urdf.xacro" />
   <!-- Arm -->
   <xacro:include filename="$(find reemc_description)/urdf/arm/arm.urdf.xacro" />
   <!-- Hey5 Hand -->
@@ -49,7 +56,6 @@
   <!-- Sensors -->
   <xacro:include filename="$(find reemc_description)/urdf/sensors/imu.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/laser.urdf.xacro" />
-  <xacro:include filename="$(find reemc_description)/urdf/sensors/stereo_camera.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/back_camera.urdf.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/ftsensor.urdf.xacro" />
 
@@ -58,6 +64,39 @@
   <!-- Materials for visualization -->
   <xacro:include filename="$(find reemc_description)/urdf/materials.urdf.xacro" />
 
+  <xacro:if value="${head_version == 'v0'}">
+    <!-- stereo camera -->
+    <!-- IMPORTANT: focal_length = image_width/(2tan(hfov/2)) --> 
+    <xacro:include filename="$(find reemc_description)/urdf/sensors/stereo_camera.urdf.xacro" />
+    <xacro:reemc_stereo_camera parent="head_2_link" name="stereo" focal_length="461.943804" hfov="${71.0*deg_to_rad}" image_format="B8G8R8" image_width="659" image_height="493">
+    <!-- The following transformations expresses the pose of the stereo_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  head_2_link. -->
+      <origin xyz="0.08203  -0.0935  0.0365" rpy="1.56293 -0.00855922 -0.0201307" />
+    </xacro:reemc_stereo_camera>
+  </xacro:if>
+
+  <xacro:if value="${head_version == 'v1'}">
+
+    <xacro:include filename="$(find realsense_gazebo_plugin)/urdf/d435.urdf.xacro" />
+      <sensor_d435 parent="head_2_link">
+        <origin xyz="0.018894 -0.187954 0" rpy="${90.0*deg_to_rad} 0 0"/>
+      </sensor_d435>
+
+  </xacro:if>
+
+  <joint name="camera_optical_frame_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />      
+    <parent link="${camera}_optical_frame"/>
+    <child link="camera_optical_frame"/>
+  </joint>
+    <!-- optical frame for the stereo camera, with z-forward notation, this is the frame stereo camera images users should refer to -->
+  <link name="camera_optical_frame" type="camera">
+    <inertial>
+      <mass value="0.01" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0"  ixy="0"  ixz="0" 
+               iyy="0"  iyz="0"  izz="0" />
+    </inertial>
+  </link>
 
   <!-- Now we can start using the macros included above to define the actual robot -->
   <!-- The reflect parameter takes the value 1 or -1 to respectively distinguish right from left side in expressions -->
@@ -70,13 +109,6 @@
   <xacro:reem_arm name="arm" parent="torso_2_link" side="left"  reflect="-1.0" wrist_6_range="81"/>
   <xacro:ft_sensor name="wrist" parent="arm_right_tool_link" side="right" reflect="1.0"  />
   <xacro:ft_sensor name="wrist" parent="arm_left_tool_link"  side="left"  reflect="-1.0" />
-
-  <!-- stereo camera -->
-  <!-- IMPORTANT: focal_length = image_width/(2tan(hfov/2)) --> 
-  <xacro:reemc_stereo_camera parent="head_2_link" name="stereo" focal_length="461.943804" hfov="${71.0*deg_to_rad}" image_format="B8G8R8" image_width="659" image_height="493">
-<!-- The following transformations expresses the pose of the stereo_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  head_2_link. -->
-    <origin xyz="0.08203  -0.0935  0.0365" rpy="1.56293 -0.00855922 -0.0201307" />
-  </xacro:reemc_stereo_camera>
 
   <xacro:reemc_back_camera parent="torso_2_link" name="back_camera" focal_length="376.002379" hfov="${89.999451423*deg_to_rad}" image_format="B8G8R8" image_width="752" image_height="480" >
     <!-- The following transformations expresses the pose of the back_camera_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  torso_2_link. -->

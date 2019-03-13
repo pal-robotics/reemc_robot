@@ -1,5 +1,7 @@
 <launch>
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find reemc_description)/robots/reemc_full_no_hands.urdf.xacro'"/>
+  <include file="$(find reemc_description)/robots/upload_reemc.launch">
+  	<arg name="robot" value="full_no_hands"/>
+  </include>
 
   <include file="$(find urdf_test)/launch/test_urdf.launch">
     <arg name="get_description" value="true"/>
