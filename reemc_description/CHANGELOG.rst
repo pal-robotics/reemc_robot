@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.6 (2019-03-13)
+------------------
 * Merge branch 'realsense' into 'erbium-devel'
   Add realsense camera
   See merge request robots/reemc_robot!22
