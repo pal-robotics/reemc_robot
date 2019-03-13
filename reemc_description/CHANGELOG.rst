@@ -2,6 +2,17 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'realsense' into 'erbium-devel'
+  Add realsense camera
+  See merge request robots/reemc_robot!22
+* Add generic camera frame
+* Modified tests for REEM-C new version
+* Update the rest of the robot files with the new head version
+* Add realsense camera
+* Contributors: Adria Roig, Victor Lopez
+
 1.0.5 (2019-03-07)
 ------------------
 * Merge branch 'merge-from-github' into 'erbium-devel'
