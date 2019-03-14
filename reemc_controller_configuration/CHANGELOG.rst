@@ -2,6 +2,15 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'actuator_simulation' into 'erbium-devel'
+  added more paramater to actuators
+  See merge request robots/reemc_robot!24
+* fixed local joint control
+* added more paramater to actuators
+* Contributors: Hilario Tome
+
 1.0.6 (2019-03-13)
 ------------------
 
