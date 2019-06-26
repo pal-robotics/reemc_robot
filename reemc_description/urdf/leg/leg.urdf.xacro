@@ -16,25 +16,33 @@
   <xacro:include filename="$(find reemc_description)/urdf/sensors/ftsensor.gazebo.xacro"/>
   <xacro:include filename="$(find reemc_description)/urdf/sensors/laser.urdf.xacro"/>
 
+  <xacro:arg name="leg_version" default="v0"/>
+  <xacro:property name="leg_version" value="$(arg leg_version)" />
+  <xacro:if value="${leg_version not in ['v0','v1']}">
+    <xacro:wrong_leg_version/>
+  </xacro:if>
+
+  <xacro:property name="camera" value="${'camera_color' if head_version == 'v1' else 'stereo'}"/>
+
   <!--Constant parameters-->
   <xacro:property name="leg_friction"       value="1.0" />
   <xacro:property name="leg_damping"        value="1.0" />
   <xacro:property name="leg_reduction"      value="1.0" />
   <xacro:property name="leg_eps"            value="0.0" />
 
-  <xacro:property name="leg_1_joint_max_vel"        value="2.35" />
-  <xacro:property name="leg_2_joint_max_vel"        value="2.27" />
-  <xacro:property name="leg_3_joint_max_vel"        value="3.64" />
-  <xacro:property name="leg_4_joint_max_vel"        value="3.225" />
-  <xacro:property name="leg_5_joint_max_vel"        value="2.44" />
-  <xacro:property name="leg_6_joint_max_vel"        value="2.27" />
+  <xacro:property name="leg_1_joint_max_vel"        value="${2.74 if leg_version=='v1' else 2.35}" />
+  <xacro:property name="leg_2_joint_max_vel"        value="${3.94 if leg_version=='v1' else 2.27}" />
+  <xacro:property name="leg_3_joint_max_vel"        value="${6.0  if leg_version=='v1' else 3.64}" />
+  <xacro:property name="leg_4_joint_max_vel"        value="${4.25 if leg_version=='v1' else 3.225}" />
+  <xacro:property name="leg_5_joint_max_vel"        value="${4.0  if leg_version=='v1' else 2.44}" />
+  <xacro:property name="leg_6_joint_max_vel"        value="${3.94 if leg_version=='v1' else 2.27}" />
 
-  <xacro:property name="leg_1_joint_effort"        value="42.7" />
-  <xacro:property name="leg_2_joint_effort"        value="64.0" />
-  <xacro:property name="leg_3_joint_effort"        value="55.7" />
-  <xacro:property name="leg_4_joint_effort"        value="138.3" />
-  <xacro:property name="leg_5_joint_effort"        value="80.9" />
-  <xacro:property name="leg_6_joint_effort"        value="64.0" />
+  <xacro:property name="leg_1_joint_effort"        value="${50.69 if leg_version=='v1' else 42.7}" />
+  <xacro:property name="leg_2_joint_effort"        value="${71.4  if leg_version=='v1' else 64.0}" />
+  <xacro:property name="leg_3_joint_effort"        value="${62.9  if leg_version=='v1' else 55.7}" />
+  <xacro:property name="leg_4_joint_effort"        value="${140.4 if leg_version=='v1' else 138.3}" />
+  <xacro:property name="leg_5_joint_effort"        value="${91.6  if leg_version=='v1' else 80.9}" />
+  <xacro:property name="leg_6_joint_effort"        value="${71.48 if leg_version=='v1' else 64.0}" />
 
 
   <xacro:macro name="reemc_leg" params="name parent side reflect">
