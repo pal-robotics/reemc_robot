@@ -14,7 +14,7 @@
         xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
 
-  <xacro:arg name="head_version" default="v1"/>
+  <xacro:arg name="head_version" default="v0"/>
   <xacro:property name="camera" value="${'camera_color' if head_version == 'v1' else 'stereo'}"/>
   <xacro:property name="head_version" value="$(arg head_version)" />
   <xacro:if value="${head_version not in ['v0','v1']}">
