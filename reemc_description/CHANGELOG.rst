@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.8 (2019-07-02)
+------------------
 * Merge branch 'reemc_head_leg_v0_and_v1' into 'erbium-devel'
   Adding legs v0,v1 specs and setting default version for leg and head to v0 for back-compatibility
   See merge request robots/reemc_robot!25
