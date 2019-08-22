@@ -2,6 +2,9 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.8 (2019-07-02)
 ------------------
 * Merge branch 'reemc_head_leg_v0_and_v1' into 'erbium-devel'

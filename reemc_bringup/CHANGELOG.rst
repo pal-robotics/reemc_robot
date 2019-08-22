@@ -2,6 +2,14 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'head_version' into 'erbium-devel'
+  Add head_version to bringup
+  See merge request robots/reemc_robot!26
+* Add head_version to bringup
+* Contributors: Adria Roig, Victor Lopez
+
 1.0.8 (2019-07-02)
 ------------------
 
