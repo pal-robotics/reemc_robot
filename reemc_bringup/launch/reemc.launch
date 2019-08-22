@@ -1,5 +1,6 @@
 <launch>
   <arg name="robot" default="full_ft_hey5"/>
+  <arg name="head_version" default="v0"/>
 
   <!-- Hardware configuration -->
   <rosparam command="load" file="$(find reemc_bringup)/config/reemc_$(arg robot)_hardware.yaml" />
@@ -19,6 +20,7 @@
   <!-- Robot model -->
   <include file="$(find reemc_description)/robots/upload_reemc.launch" >
      <arg name="robot" value="$(arg robot)"/>
+     <arg name="head_version" value="$(arg head_version)"/>
   </include>
 
   <!-- Bring up robot -->
