@@ -72,8 +72,8 @@
  
         <safety_controller k_position="100"
                            k_velocity="100"
-                           soft_lower_limit="${-37.5*deg_to_rad + reflect*7.5*deg_to_rad + leg_eps}"
-                           soft_upper_limit="${ 37.5*deg_to_rad + reflect*7.5*deg_to_rad - leg_eps}" />
+                           soft_lower_limit="${-35.5*deg_to_rad + reflect*7.5*deg_to_rad + leg_eps}"
+                           soft_upper_limit="${ 35.5*deg_to_rad + reflect*7.5*deg_to_rad - leg_eps}" />
       </joint>
 
       <link name="leg_${side}_2_link">
@@ -101,8 +101,8 @@
 
         <safety_controller k_position="100"
                            k_velocity="100"
-                           soft_lower_limit="${-22.5*deg_to_rad - reflect*7.5*deg_to_rad + leg_eps}"
-                           soft_upper_limit="${ 22.5*deg_to_rad - reflect*7.5*deg_to_rad - leg_eps}" />
+                           soft_lower_limit="${-20.5*deg_to_rad - reflect*7.5*deg_to_rad + leg_eps}"
+                           soft_upper_limit="${ 20.5*deg_to_rad - reflect*7.5*deg_to_rad - leg_eps}" />
     </joint>
 
     <link name="leg_${side}_3_link">
@@ -136,8 +136,8 @@
 
       <safety_controller k_position="100"
                          k_velocity="100"
-                         soft_lower_limit="${-100.0 * deg_to_rad + leg_eps}"
-                         soft_upper_limit="${  45.0 * deg_to_rad - leg_eps}" />
+                         soft_lower_limit="${-98.0 * deg_to_rad + leg_eps}"
+                         soft_upper_limit="${  43.0 * deg_to_rad - leg_eps}" />
     </joint>
 
     <link name="leg_${side}_4_link">
@@ -172,8 +172,8 @@
 
       <safety_controller k_position="100"
                          k_velocity="100"
-                         soft_lower_limit="${  0.0 * deg_to_rad + leg_eps}"
-                         soft_upper_limit="${150.0 * deg_to_rad - leg_eps}" />
+                         soft_lower_limit="${  2.0 * deg_to_rad + leg_eps}"
+                         soft_upper_limit="${148.0 * deg_to_rad - leg_eps}" />
     </joint>
 
     <link name="leg_${side}_5_link">
@@ -202,8 +202,8 @@
 
       <safety_controller k_position="100"
                          k_velocity="100"
-                         soft_lower_limit="${ -75.0 * deg_to_rad + leg_eps}"
-                         soft_upper_limit="${  45.0 * deg_to_rad - leg_eps}" />
+                         soft_lower_limit="${ -73.0 * deg_to_rad + leg_eps}"
+                         soft_upper_limit="${  43.0 * deg_to_rad - leg_eps}" />
     </joint>
 
     <link name="leg_${side}_6_link">
@@ -237,8 +237,8 @@
 
       <safety_controller k_position="100"
                          k_velocity="100"
-                         soft_lower_limit="${-22.5*deg_to_rad + reflect*7.5*deg_to_rad + leg_eps}"
-                         soft_upper_limit="${ 22.5*deg_to_rad + reflect*7.5*deg_to_rad - leg_eps}" />
+                         soft_lower_limit="${-20.5*deg_to_rad + reflect*7.5*deg_to_rad + leg_eps}"
+                         soft_upper_limit="${ 20.5*deg_to_rad + reflect*7.5*deg_to_rad - leg_eps}" />
     </joint>
 
     <link name="${side}_sole_link">

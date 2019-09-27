@@ -58,8 +58,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-75.0 * deg_to_rad + head_eps}"
-                         soft_upper_limit="${ 75.0 * deg_to_rad - head_eps}" />
+                         soft_lower_limit="${-73.0 * deg_to_rad + head_eps}"
+                         soft_upper_limit="${ 73.0 * deg_to_rad - head_eps}" />
     </joint>
 
     <gazebo reference="${name}_link">
@@ -110,8 +110,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-15.0 * deg_to_rad + head_eps}"
-                         soft_upper_limit="${ 45.0 * deg_to_rad}" />
+                         soft_lower_limit="${-13.0 * deg_to_rad + head_eps}"
+                         soft_upper_limit="${ 43.0 * deg_to_rad}" />
     </joint>
 
     <gazebo reference="${name}_link">
