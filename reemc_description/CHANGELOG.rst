@@ -2,6 +2,14 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'realsense_plugin_macro_fix' into 'erbium-devel'
+  realsense gazebo plugin macro fix
+  See merge request robots/reemc_robot!28
+* realsense gazebo plugin macro fix
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
 1.0.9 (2019-08-22)
 ------------------
 
