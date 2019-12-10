@@ -2,6 +2,14 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'realsense_description' into 'erbium-devel'
+  added URDF from realsense2_description and its dependency
+  See merge request robots/reemc_robot!30
+* added URDF from realsense2_description and its dependency
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 1.0.10 (2019-10-30)
 -------------------
 * Merge branch 'realsense_plugin_macro_fix' into 'erbium-devel'
