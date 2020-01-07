@@ -2,6 +2,14 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'local_no_control' into 'erbium-devel'
+  Add local no control files
+  See merge request robots/reemc_robot!29
+* Add local no control files
+* Contributors: Adria Roig, Victor Lopez
+
 1.0.11 (2019-12-10)
 -------------------
 
