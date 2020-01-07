@@ -2,8 +2,8 @@
 Changelog for package reemc_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.13 (2020-01-07)
+-------------------
 * Merge branch 'softlimit_fixes' into 'erbium-devel'
   update the soft limits of all joints
   See merge request robots/reemc_robot!27
