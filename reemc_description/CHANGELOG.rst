@@ -2,6 +2,14 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'softlimit_fixes' into 'erbium-devel'
+  update the soft limits of all joints
+  See merge request robots/reemc_robot!27
+* update the soft limits of all joints
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 1.0.12 (2020-01-07)
 -------------------
 
