@@ -71,8 +71,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-45.0 * deg_to_rad  + arm_eps}"
-                         soft_upper_limit="${ 180.0 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${-43.0 * deg_to_rad  + arm_eps}"
+                         soft_upper_limit="${ 178.0 * deg_to_rad - arm_eps}" />
     </joint>
 
    <link name="${name}_${side}_2_link">
@@ -109,8 +109,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-15.0 * deg_to_rad  + arm_eps}"
-                         soft_upper_limit="${ 120.0 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${-13.0 * deg_to_rad  + arm_eps}"
+                         soft_upper_limit="${ 118.0 * deg_to_rad - arm_eps}" />
     </joint>
 
     <link name="${name}_${side}_3_link">
@@ -146,8 +146,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-135.0 * deg_to_rad + arm_eps}"
-                         soft_upper_limit="${ 157.5 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${-133.0 * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${ 155.5 * deg_to_rad - arm_eps}" />
     </joint>
 
     <!--************************-->
@@ -187,8 +187,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="0.0"
-                         soft_upper_limit="${ 130.0 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${ 2.0 * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${ 128.0 * deg_to_rad - arm_eps}" />
     </joint>
 
    <gazebo reference="${name}_${side}_1_link">

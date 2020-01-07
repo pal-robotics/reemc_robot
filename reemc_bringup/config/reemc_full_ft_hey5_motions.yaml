@@ -25,8 +25,8 @@ play_motion:
         hand_right_thumb_joint, hand_right_index_joint, hand_right_mrl_joint, hand_left_thumb_joint,
         hand_left_index_joint, hand_left_mrl_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1,
-          0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.1,
+          0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
       meta:
         name: Home

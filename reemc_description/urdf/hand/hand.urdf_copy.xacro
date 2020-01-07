@@ -33,8 +33,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${  0.0 * deg_to_rad}"
-                         soft_upper_limit="${250.0 * deg_to_rad - hand_eps}" />
+                         soft_lower_limit="${  2.0 * deg_to_rad}"
+                         soft_upper_limit="${248.0 * deg_to_rad - hand_eps}" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_link">
@@ -211,8 +211,8 @@
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${ 0.0 * deg_to_rad}"
-                         soft_upper_limit="${90.0 * deg_to_rad - hand_eps}" />
+                         soft_lower_limit="${ 2.0 * deg_to_rad}"
+                         soft_upper_limit="${88.0 * deg_to_rad - hand_eps}" />
     </joint>
 
     <link name="${name}_${side}_thumb_link">
