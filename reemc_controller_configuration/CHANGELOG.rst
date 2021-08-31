@@ -2,8 +2,8 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.14 (2021-08-31)
+-------------------
 * Merge branch 'kangaroo_wbc' into 'erbium-devel'
   Add BS parameters needed for local joint control
   See merge request robots/reemc_robot!31
