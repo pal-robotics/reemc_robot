@@ -4,7 +4,7 @@
   <arg name="leg_version"  default="v0"/>
 
   <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find reemc_description)/robots/reemc_$(arg robot).urdf.xacro' head_version:=$(arg head_version) leg_version:=$(arg leg_version)"/>
+  <param name="robot_description" command="xacro '$(find reemc_description)/robots/reemc_$(arg robot).urdf.xacro' head_version:=$(arg head_version) leg_version:=$(arg leg_version)"/>
 
   <!-- Joint limits -->
   <rosparam command="load" file="$(find reemc_description)/config/joint_limits.yaml"/>
