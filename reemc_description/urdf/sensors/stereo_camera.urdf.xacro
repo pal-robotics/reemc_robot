@@ -13,12 +13,12 @@
   <xacro:include filename="$(find reemc_description)/urdf/sensors/prosilica_stereo_camera.gazebo.xacro" />
   <xacro:include filename="$(find reemc_description)/urdf/sensors/prosilicaGC655C_camera.urdf.xacro" />
 
-  <property name="stereo_dx" value="0.00" />
-  <property name="stereo_dy" value="-0.073" /> <!-- stereo baseline according to base_link which has X pointing forward, Y leftwards and Z upwards (required by Gazebo for a camera sensor) --> 
-  <property name="stereo_dz" value="0.00" />   
-  <property name="stereo_rx" value="0.00" />
-  <property name="stereo_ry" value="0.00" />
-  <property name="stereo_rz" value="0.00" />
+  <xacro:property name="stereo_dx" value="0.00" />
+  <xacro:property name="stereo_dy" value="-0.073" /> <!-- stereo baseline according to base_link which has X pointing forward, Y leftwards and Z upwards (required by Gazebo for a camera sensor) -->
+  <xacro:property name="stereo_dz" value="0.00" />
+  <xacro:property name="stereo_rx" value="0.00" />
+  <xacro:property name="stereo_ry" value="0.00" />
+  <xacro:property name="stereo_rz" value="0.00" />
 
   <!-- this macro is used for creating wide and narrow double stereo camera links -->
   <xacro:macro name="reemc_stereo_camera" params="name parent focal_length hfov image_format image_width image_height *origin">
@@ -57,7 +57,7 @@
 
     <!-- attach optical frame to the camera link -->
     <joint name="${name}_optical_frame_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-M_PI/2} 0.0 ${-M_PI/2}" /> <!-- rotate frame from x-forward to z-forward camera coords -->      
+      <origin xyz="0 0 0" rpy="${-pi/1} 0.0 ${-pi/2}" /> <!-- rotate frame from x-forward to z-forward camera coords -->
       <parent link="${name}_link"/>
       <child link="${name}_optical_frame"/>
     </joint>
