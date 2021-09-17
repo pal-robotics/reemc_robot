@@ -2,6 +2,16 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'gallium_fixes' into 'erbium-devel'
+  Gallium fixes
+  See merge request robots/reemc_robot!32
+* Use pi instead of M_PI
+* Added missing xacro tags
+* Use xacro command
+* Contributors: Jordan Palacios
+
 1.0.14 (2021-08-31)
 -------------------
 

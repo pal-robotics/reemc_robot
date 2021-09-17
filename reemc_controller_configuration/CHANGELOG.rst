@@ -2,6 +2,9 @@
 Changelog for package reemc_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.14 (2021-08-31)
 -------------------
 * Merge branch 'kangaroo_wbc' into 'erbium-devel'
