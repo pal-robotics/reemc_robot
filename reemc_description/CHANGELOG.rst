@@ -2,8 +2,8 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.15 (2021-09-17)
+-------------------
 * Merge branch 'gallium_fixes' into 'erbium-devel'
   Gallium fixes
   See merge request robots/reemc_robot!32
