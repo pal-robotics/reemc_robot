@@ -2,6 +2,14 @@
 Changelog for package reemc_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'set_nominal_extrinsics_param' into 'erbium-devel'
+  added the use_nominal_extrinsics parameter to true for head_version V1
+  See merge request robots/reemc_robot!33
+* added the use_nominal_extrinsics parameter to true for head_version V1
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
 1.0.15 (2021-09-17)
 -------------------
 * Merge branch 'gallium_fixes' into 'erbium-devel'
