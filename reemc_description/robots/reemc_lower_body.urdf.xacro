@@ -78,7 +78,7 @@
   <xacro:if value="${head_version == 'v1'}">
 
     <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
-      <sensor_d435 parent="head_2_link">
+      <sensor_d435 parent="head_2_link" use_nominal_extrinsics="true">
         <origin xyz="0.018894 -0.187954 0" rpy="${90.0*deg_to_rad} 0 0"/>
       </sensor_d435>
 
