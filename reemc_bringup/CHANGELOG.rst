@@ -11,8 +11,8 @@ Changelog for package reemc_bringup
 1.0.14 (2021-08-31)
 -------------------
 
-Forthcoming
------------
+1.0.17 (2021-11-22)
+-------------------
 * Use robot_state_publisher instead of deprecated state_publisher
 * 1.0.16
 * Update Changelog

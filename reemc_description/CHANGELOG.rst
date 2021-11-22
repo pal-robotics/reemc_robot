@@ -23,8 +23,8 @@ Changelog for package reemc_description
 1.0.14 (2021-08-31)
 -------------------
 
-Forthcoming
------------
+1.0.17 (2021-11-22)
+-------------------
 * 1.0.16
 * Update Changelog
 * Merge branch 'set_nominal_extrinsics_param' into 'erbium-devel'

@@ -11,8 +11,8 @@ Changelog for package reemc_robot
 1.0.14 (2021-08-31)
 -------------------
 
-Forthcoming
------------
+1.0.17 (2021-11-22)
+-------------------
 * 1.0.16
 * Update Changelog
 * 1.0.15
