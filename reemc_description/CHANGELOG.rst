@@ -23,6 +23,26 @@ Changelog for package reemc_description
 1.0.14 (2021-08-31)
 -------------------
 
+Forthcoming
+-----------
+* 1.0.16
+* Update Changelog
+* Merge branch 'set_nominal_extrinsics_param' into 'erbium-devel'
+  added the use_nominal_extrinsics parameter to true for head_version V1
+  See merge request robots/reemc_robot!33
+* added the use_nominal_extrinsics parameter to true for head_version V1
+* 1.0.15
+* Updated changelogs
+* Merge branch 'gallium_fixes' into 'erbium-devel'
+  Gallium fixes
+  See merge request robots/reemc_robot!32
+* Use pi instead of M_PI
+* Added missing xacro tags
+* Use xacro command
+* 1.0.14
+* Updated Changelog
+* Contributors: Adria Roig, Jordan Palacios, Sai Kishor Kothakota, Victor Lopez
+
 1.0.13 (2020-01-07)
 -------------------
 * Merge branch 'softlimit_fixes' into 'erbium-devel'

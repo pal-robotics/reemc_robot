@@ -11,6 +11,17 @@ Changelog for package reemc_bringup
 1.0.14 (2021-08-31)
 -------------------
 
+Forthcoming
+-----------
+* Use robot_state_publisher instead of deprecated state_publisher
+* 1.0.16
+* Update Changelog
+* 1.0.15
+* Updated changelogs
+* 1.0.14
+* Updated Changelog
+* Contributors: Adria Roig, Jordan Palacios, Victor Lopez
+
 1.0.13 (2020-01-07)
 -------------------
 * Merge branch 'softlimit_fixes' into 'erbium-devel'

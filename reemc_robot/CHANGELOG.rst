@@ -11,6 +11,16 @@ Changelog for package reemc_robot
 1.0.14 (2021-08-31)
 -------------------
 
+Forthcoming
+-----------
+* 1.0.16
+* Update Changelog
+* 1.0.15
+* Updated changelogs
+* 1.0.14
+* Updated Changelog
+* Contributors: Adria Roig, Jordan Palacios, Victor Lopez
+
 1.0.13 (2020-01-07)
 -------------------
 
