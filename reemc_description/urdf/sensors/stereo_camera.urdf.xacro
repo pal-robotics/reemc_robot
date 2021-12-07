@@ -57,7 +57,7 @@
 
     <!-- attach optical frame to the camera link -->
     <joint name="${name}_optical_frame_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-pi/1} 0.0 ${-pi/2}" /> <!-- rotate frame from x-forward to z-forward camera coords -->
+      <origin xyz="0 0 0" rpy="${-pi/2} 0.0 ${-pi/2}" /> <!-- rotate frame from x-forward to z-forward camera coords -->
       <parent link="${name}_link"/>
       <child link="${name}_optical_frame"/>
     </joint>
