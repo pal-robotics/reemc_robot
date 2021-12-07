@@ -23,6 +23,14 @@ Changelog for package reemc_description
 1.0.14 (2021-08-31)
 -------------------
 
+Forthcoming
+-----------
+* Merge branch 'fix_stereo_camera_link' into 'erbium-devel'
+  fix the stereo optical camera link origin
+  See merge request robots/reemc_robot!34
+* fix the stereo optical camera link origin
+* Contributors: Sai Kishor Kothakota, saikishor
+
 1.0.17 (2021-11-22)
 -------------------
 * 1.0.16

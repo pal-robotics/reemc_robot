@@ -16,6 +16,9 @@ Changelog for package reemc_controller_configuration
 * Add BS parameters needed for local joint control
 * Contributors: Adria Roig, victor
 
+Forthcoming
+-----------
+
 1.0.17 (2021-11-22)
 -------------------
 * 1.0.16
