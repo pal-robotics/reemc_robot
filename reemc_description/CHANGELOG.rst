@@ -23,6 +23,14 @@ Changelog for package reemc_description
 1.0.14 (2021-08-31)
 -------------------
 
+Forthcoming
+-----------
+* Merge branch 'fix_realsense_frame' into 'erbium-devel'
+  fixed the transform to the realsense D435 link
+  See merge request robots/reemc_robot!35
+* fixed the transform to the realsense D435 link
+* Contributors: Sai Kishor Kothakota, saikishor
+
 1.0.18 (2021-12-07)
 -------------------
 * Merge branch 'fix_stereo_camera_link' into 'erbium-devel'
