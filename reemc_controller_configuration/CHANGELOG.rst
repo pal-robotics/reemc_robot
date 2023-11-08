@@ -16,8 +16,8 @@ Changelog for package reemc_controller_configuration
 * Add BS parameters needed for local joint control
 * Contributors: Adria Roig, victor
 
-Forthcoming
------------
+1.0.20 (2023-11-08)
+-------------------
 * Merge branch 'smooth_position_control' into 'erbium-devel'
   Add parameters for direct_position_control
   See merge request robots/reemc_robot!36
